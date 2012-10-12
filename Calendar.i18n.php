@@ -15,5 +15,3 @@ $messages['en'] = array(
 $messages['de'] = array(
 	'calendar-desc'            => 'Ausgabe eines Kalenders',
 );
-
-?>
