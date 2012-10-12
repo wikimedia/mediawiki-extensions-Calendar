@@ -19,20 +19,25 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $dir = dirname( __FILE__ ) . '/';
 $wgExtensionMessagesFiles['Calendar'] = $dir . 'Calendar.i18n.php';
 
-$wgExtensionFunctions[] = 'wfSetupCalendar';
-
 $wgExtensionCredits['parserhook']['Calendar'] = array(
 	'path' => __FILE__,
 	'name' => 'Calendar',
 	'url' => 'http://www.wikivoyage.org/tech/Calendar_extension',
-	'description' => 'Calendar extension',
 	'descriptionmsg' => 'calendar-desc',
 	'author' => 'Roland Unger',
 	'version' => '1.03'
 );
 
 $wgHooks['LanguageGetMagic'][] = 'wfCalendarLanguageGetMagic';
-$wgHooks['BeforePageDisplay'][] = 'wfCalendarParserOutput';
+$wgHooks['ParserFirstCallInit'][] = 'wfRegisterCalendar';
+
+$commonModuleInfo = array(
+	'localBasePath' => dirname( __FILE__ ) . '/modules',
+	'remoteExtPath' => 'Calendar/modules',
+);
+$wgResourceModules['ext.calendar'] = array(
+	'styles' => 'ext.calendar.css',
+) + $commonModuleInfo;
 
 class CalendarTable {
 	var $lng = 'content';
@@ -53,90 +58,128 @@ class CalendarTable {
 	var $today, $curDay, $curMonth, $curYear, $month, $year;
 	var $monthArr, $dayArr;
 
+	/**
+	 * @param $timestamp
+	 * @return int
+	 */
 	function dayOfWeek( $timestamp ) {
 		return intval( strftime( "%w", $timestamp ) );
 	}
 
+	/**
+	 * @param $aMonth
+	 * @param $aYear
+	 * @return int
+	 */
 	function daysInMonth( $aMonth, $aYear ) {
-		for ( $day = 27; checkdate( $aMonth, $day, $aYear ); $day++ ) ;
+		for ( $day = 27; checkdate( $aMonth, $day, $aYear ); $day++ ) {
+		}
 		return --$day;
 	}
 
+	/**
+	 * @param $aYear
+	 * @return bool
+	 */
 	function isLeapYear( $aYear ) {
 		return $this->daysInMonth( 2, $aYear ) == 29;
 	}
 
+	/**
+	 * @param $aMonth
+	 * @param $aYear
+	 * @return int
+	 */
 	function dayOfWeekOfFirstOfMonth( $aMonth, $aYear ) {
 		return $this->dayOfWeek( mktime( 0, 0, 0, $aMonth, 1, $aYear ) );
 	}
 
+	/**
+	 * @param $aMonth
+	 * @param $aLen
+	 * @return string
+	 */
 	function getMonthName( $aMonth, $aLen ) {
-		$mMonthMsgs = array(
-			'january', 'february', 'march', 'april', 'may_long', 'june',
-			'july', 'august', 'september', 'october', 'november', 'december' );
-		if ( $this->lng == 'user' ) {
-			$out = wfMsg( $mMonthMsgs[$aMonth - 1] );
-		}  else {
-			$out = wfMsgForContent( $mMonthMsgs[$aMonth - 1] );
-		}
-		if ( $aLen > 0 ) {
-			$out = substr( $out, 0, $aLen );
-		}
-		return ucfirst( $out );
+		$out = $this->getLang()->getMonthName( $aMonth );
+		return $this->cutLength( $out, $aLen );
 	}
 
+	/**
+	 * @param $aMonth
+	 * @param $aLen
+	 * @return string
+	 */
 	function getMonthNameAbbrev( $aMonth, $aLen ) {
-		$mMonthMsgs = array(
-			'jan', 'feb', 'mar', 'apr', 'may', 'May', 'jun',
-			'jul', 'aug', 'sep', 'oct', 'nov', 'dec' );
-		if ( $this->lng == 'user' ) {
-			$out = wfMsg( $mMonthMsgs[$aMonth - 1] );
-		} else {
-			$out = wfMsgForContent( $mMonthMsgs[$aMonth - 1] );
-		}
-		if ( $aLen > 0 ) {
-			$out = substr( $out, 0, $aLen );
-		}
-		return ucfirst( $out );
+		$out = $this->getLang()->getMonthAbbreviation( $aMonth );
+		return $this->cutLength( $out, $aLen );
 	}
 
+	/**
+	 * @param $aDay
+	 * @param $aLen
+	 * @return string
+	 */
 	function getWeekday( $aDay, $aLen ) {
-		$mWeekdayAbbrevMsgs = array(
-			'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday' );
-		if ( $this->lng == 'user' ) {
-			$out = wfMsg( $mWeekdayAbbrevMsgs[$aDay % 7] );
-		} else {
-			$out = wfMsgForContent( $mWeekdayAbbrevMsgs[$aDay % 7] );
-		}
-		if ( $aLen > 0 ) {
-			$out = substr( $out, 0, $aLen );
-		}
-		return ucfirst( $out );
+		$out = $this->getLang()->getWeekdayName( $aDay % 7 );
+		return $this->cutLength( $out, $aLen );
 	}
 
+	/**
+	 * @param $aDay
+	 * @param $aLen
+	 * @return string
+	 */
 	function getWeekdayAbbrev( $aDay, $aLen ) {
-		$mWeekdayAbbrevMsgs = array(
-			'sun', 'mon', 'tue', 'wed', 'thu', 'fri', 'sat' );
-		if ( $this->lng == 'user' ) {
-			$out = wfMsg( $mWeekdayAbbrevMsgs[$aDay % 7] );
-		} else {
-			$out = wfMsgForContent( $mWeekdayAbbrevMsgs[$aDay % 7] );
-		}
-		if ( $aLen > 0 ) {
-			$out = substr( $out, 0, $aLen );
-		}
-		return ucfirst( $out );
+		$out = $this->getLang()->getWeekdayAbbreviation( $aDay % 7 );
+		return $this->cutLength( $out, $aLen );
 	}
 
+	/**
+	 * @param $string string
+	 * @param $len int
+	 * @return string
+	 */
+	private function cutLength( $string, $len ) {
+		if ( $len > 0 ) {
+			$string = substr( $string, 0, $len );
+		}
+		return ucfirst( $string );
+	}
+
+	/**
+	 * @return Language
+	 */
+	private function getLang() {
+		if ( $this->lng == 'user' ) {
+			global $wgLang;
+			return $wgLang;
+		}
+		global $wgContLang;
+		return $wgContLang;
+	}
+
+	/**
+	 * @param $str
+	 * @param $array
+	 * @return mixed
+	 */
 	function replace( $str, $array ) {
-		foreach ( $array as $key => $val )
+		foreach ( $array as $key => $val ) {
 			$str = str_replace( '$' . $key, $val, $str );
+		}
 		return str_replace( '$%', '$', $str );
 	}
 
+	/**
+	 * @return string
+	 */
 	function buildTable() {
+		global $wgOut;
+		// TODO: Find a better place for this
+		$wgOut->addModuleStyles( 'ext.calendar' );
+
 		$day1 = $this->dayOfWeekOfFirstOfMonth( $this->month, $this->year );
-		if ( ( $this->weekStart > 0 ) and ( $day1 == 0 ) ) {
+		if ( ( $this->weekStart > 0 ) && ( $day1 == 0 ) ) {
 			$day1 = 7;
 		}
 		$days = $this->daysInMonth( $this->month, $this->year );
@@ -157,7 +200,7 @@ class CalendarTable {
 
 		if ( $this->tableWidth == 'default' ) {
 			$result .= ' calWidth';
-		} else if ( $this->tableWidth != 'none' ) {
+		} elseif ( $this->tableWidth != 'none' ) {
 			$style .= ' style="width: ' . $this->tableWidth . '"';
 		}
 		$result = '{| class="' . $result . '"' . $style . "\n|-\n";
@@ -183,10 +226,13 @@ class CalendarTable {
 		}
 
 		$result .= "|-\n";
-		for ( $i = $this->weekStart; $i < 7; $i++ ) $result .= "! " . $this->getWeekdayAbbrev( $i, $this->dayCharsCount ) . "\n";
+		for ( $i = $this->weekStart; $i < 7; $i++ ) {
+			$result .= "! " . $this->getWeekdayAbbrev( $i, $this->dayCharsCount ) . "\n";
+		}
 		if ( $this->weekStart > 0 ) {
-			for ( $i = 0; $i < $this->weekStart; $i++ )
+			for ( $i = 0; $i < $this->weekStart; $i++ ) {
 				$result .= "! " . $this->getWeekdayAbbrev( $i, $this->dayCharsCount ) . "\n";
+			}
 		}
 
 		$c = 1 - $day1 + $this->weekStart;
@@ -199,14 +245,14 @@ class CalendarTable {
 				$this->dayArr['d'] = sprintf( '%02s', $c );
 				$this->dayArr['e'] = sprintf( '%2s', $c );
 				$styles = array();
-				if ( ( $i == 0 ) and ( $this->weekStart == 0 ) ) {
+				if ( $i == 0 && $this->weekStart == 0 ) {
 					$styles[] = 'sundays';
 				}
-				if ( ( $i == 6 ) and ( $this->weekStart == 1 ) ) {
+				if ( $i == 6 && $this->weekStart == 1 ) {
 					$styles[] = 'sundays';
 				}
-				if ( $this->showToday and ( $c == $this->curDay ) and ( $this->curMonth == $this->month )
-					and ( $this->curYear == $this->year )
+				if ( $this->showToday && ( $c == $this->curDay ) && ( $this->curMonth == $this->month )
+					&& ( $this->curYear == $this->year )
 				) {
 					$styles[] = 'today';
 				}
@@ -219,15 +265,13 @@ class CalendarTable {
 				} else {
 					$result .= '| class="' . $allStyles . '" | ';
 				}
-				if ( ( $c > 0 ) and ( $c <= $days ) ) {
+				if ( $c > 0 && $c <= $days ) {
 					if ( $this->dailyLinks[$c] != '' ) {
 						$result .= '[[' . $this->dailyLinks[$c] . '|' . $c . ']]';
+					} elseif ( $this->generalLinks != '' ) {
+						$result .= '[[' . $this->replace( $this->generalLinks, $this->dayArr ) . '|' . $c . ']]';
 					} else {
-						if ( $this->generalLinks != '' ) {
-							$result .= '[[' . $this->replace( $this->generalLinks, $this->dayArr ) . '|' . $c . ']]';
-						} else {
-							$result .= $c;
-						}
+						$result .= $c;
 					}
 				} else {
 					$result .= '&nbsp;';
@@ -239,6 +283,9 @@ class CalendarTable {
 		return $result . "|}\n";
 	}
 
+	/**
+	 * @param $args array
+	 */
 	function setParameters( &$args ) {
 		$this->today = strtotime( "now" );
 		$this->curDay = intval( strftime( "%d", $this->today ) );
@@ -246,95 +293,95 @@ class CalendarTable {
 		$this->curYear = intval( strftime( "%Y", $this->today ) );
 		$this->month = $this->curMonth;
 		$this->year = $this->curYear;
-		for ( $i = 0; $i < 32; $i++ ) $this->dailyLinks[$i] = '';
+		for ( $i = 0; $i < 32; $i++ ) {
+			$this->dailyLinks[$i] = '';
+		}
 		$offset = 0;
 
-		if ( count( $args ) > 0 ) {
-			foreach ( $args as $arg ) {
-				$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
-				if ( ( count( $parts ) == 2 ) and ( $parts[0] > 0 ) and ( $parts[0] < 32 ) ) {
-					$this->dailyLinks[$parts[0]] = $parts[1];
-				} else {
-					if ( count( $parts ) == 2 ) {
-						switch ( $parts[0] ) {
-							case 'month':
-								$this->month = intval( $parts[1] );
-								break;
-							case 'year':
-								$this->year = intval( $parts[1] );
-								break;
-							case 'offset':
-								$offset = intval( $parts[1] );
-								break;
-							case 'lang':
-								$this->lng = strtolower( $parts[1] );
-								if ( $this->lng != 'user' ) {
-									$this->lng = 'content';
-								}
-								break;
-							case 'prevLink':
-								$this->prevLink = $parts[1];
-								break;
-							case 'nextLink':
-								$this->nextLink = $parts[1];
-								break;
-							case 'title':
-								$this->calTitle = $parts[1];
-								break;
-							case 'highlightedDays':
-								$this->highlightedDays = $parts[1];
-								break;
-							case 'start':
-								$this->weekStart = $parts[1];
-								if ( $this->weekStart != 1 ) {
-									$this->weekStart = 0;
-								}
-								break;
-							case 'position':
-								$this->position = strtolower( $parts[1] );
-								break;
-							case 'titleLink':
-								$this->titleLink = $parts[1];
-								break;
-							case 'generalLinks':
-								$this->generalLinks = $parts[1];
-								break;
-							case 'dayCharsCount':
-								$this->dayCharsCount = intval( $parts[1] );
-								if ( $this->dayCharsCount < 0 ) {
-									$this->dayCharsCount = 0;
-								}
-								break;
-							case 'monthCharsCount':
-								$this->monthCharsCount = intval( $parts[1] );
-								if ( $this->monthCharsCount < 0 ) {
-									$this->monthCharsCount = 0;
-								}
-								break;
-							case 'tableWidth':
-								$this->tableWidth = $parts[1];
-								if ( ( $this->tableWidth != 'default' ) and ( $this->tableWidth != 'none' ) ) {
-									if ( preg_match( '/^\d+(\%|em|ex|pc|pt|px|in|mm|cm)$/', $this->tableWidth ) == 0 ) {
-										$this->tableWidth = 'default';
-									}
-								}
-								break;
-							case 'showToday':
-								$this->showToday = $parts[1];
-								$this->showToday = ( $this->showToday == 'true' );
+		foreach ( $args as $arg ) {
+			$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
+			if ( ( count( $parts ) == 2 ) && ( $parts[0] > 0 ) && ( $parts[0] < 32 ) ) {
+				$this->dailyLinks[$parts[0]] = $parts[1];
+			} else {
+				if ( count( $parts ) != 2 ) {
+					continue;
+				}
+				switch ( $parts[0] ) {
+						case 'month':
+							$this->month = intval( $parts[1] );
+							break;
+						case 'year':
+							$this->year = intval( $parts[1] );
+							break;
+						case 'offset':
+							$offset = intval( $parts[1] );
+							break;
+						case 'lang':
+							$this->lng = strtolower( $parts[1] );
+							if ( $this->lng != 'user' ) {
+								$this->lng = 'content';
+							}
+							break;
+						case 'prevLink':
+							$this->prevLink = $parts[1];
+							break;
+						case 'nextLink':
+							$this->nextLink = $parts[1];
+							break;
+						case 'title':
+							$this->calTitle = $parts[1];
+							break;
+						case 'highlightedDays':
+							$this->highlightedDays = $parts[1];
+							break;
+						case 'start':
+							$this->weekStart = $parts[1];
+							if ( $this->weekStart != 1 ) {
+								$this->weekStart = 0;
+							}
+							break;
+						case 'position':
+							$this->position = strtolower( $parts[1] );
+							break;
+						case 'titleLink':
+							$this->titleLink = $parts[1];
+							break;
+						case 'generalLinks':
+							$this->generalLinks = $parts[1];
+							break;
+						case 'dayCharsCount':
+							$this->dayCharsCount = intval( $parts[1] );
+							if ( $this->dayCharsCount < 0 ) {
+								$this->dayCharsCount = 0;
+							}
+							break;
+						case 'monthCharsCount':
+							$this->monthCharsCount = intval( $parts[1] );
+							if ( $this->monthCharsCount < 0 ) {
+								$this->monthCharsCount = 0;
+							}
+							break;
+						case 'tableWidth':
+							$this->tableWidth = $parts[1];
+							if ( $this->tableWidth != 'default' && $this->tableWidth != 'none'
+								&&  preg_match( '/^\d+(\%|em|ex|pc|pt|px|in|mm|cm)$/', $this->tableWidth ) == 0 ) {
+								$this->tableWidth = 'default';
+							}
+							break;
+						case 'showToday':
+							$this->showToday = $parts[1];
+							$this->showToday = ( $this->showToday == 'true' );
 
-								break;
-						}
+							break;
 					}
 				}
 			}
-		}
 
 		if ( ( $this->month < 1 ) || ( $this->month > 12 ) ) {
 			$this->month = $this->curMonth;
 			$this->year = $this->curYear;
 		}
-		;
+
 		if ( $offset != 0 ) {
 			$offM = $offset % 12;
 			$offset = round( ( $offset - $offM ) / 12 );
@@ -396,44 +443,34 @@ class CalendarTable {
 	}
 }
 
+/**
+ * @param $magicWords array
+ * @param $langCode
+ * @return bool
+ */
 function wfCalendarLanguageGetMagic( &$magicWords, $langCode = 0 ) {
 	$magicWords['calendar'] = array( 0, 'calendar' );
 	return true;
 }
 
 /**
- * @param $out OutputPage
+ * @param $parser Parser
  * @return bool
  */
-function wfCalendarParserOutput( &$out ) {
-	global $wgScriptPath;
-	# Register css file for Calendar
-	$out->addLink(
-		array(
-			'rel' => 'stylesheet',
-			'type' => 'text/css',
-			'href' => $wgScriptPath . '/extensions/Calendar/Calendar.css'
-		)
-	);
+function wfRegisterCalendar( $parser ) {
+	$parser->setFunctionHook( 'calendar', 'wfCalendar' );
 	return true;
 }
 
-function wfSetupCalendar() {
-	global $wgParser;
-	$wgParser->setFunctionHook( 'calendar', 'wfcalendar' );
-
-	return true;
-}
-
-function wfcalendar( &$parser ) {
+/**
+ * @param $parser Parser
+ * @return string
+ */
+function wfCalendar( &$parser ) {
 	$args = func_get_args();
 	array_shift( $args );
 
-	$Calendar = new CalendarTable;
-	if ( is_object( $Calendar ) ) {
-		$Calendar->setParameters( $args );
-		return $Calendar->buildTable();
-	} else {
-		return '';
-	}
+	$calendar = new CalendarTable;
+	$calendar->setParameters( $args );
+	return $calendar->buildTable();
 }

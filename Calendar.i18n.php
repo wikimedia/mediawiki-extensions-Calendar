@@ -12,6 +12,10 @@ $messages['en'] = array(
 	'calendar-desc'            => 'Calendar extension',
 );
 
+$messages['qqq'] = array(
+	'calendar-desc'            => '{{desc}}',
+);
+
 $messages['de'] = array(
 	'calendar-desc'            => 'Ausgabe eines Kalenders',
 );
