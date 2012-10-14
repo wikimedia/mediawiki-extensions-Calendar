@@ -9,7 +9,7 @@
 $messages = array();
 
 $messages['en'] = array(
-	'calendar-desc'            => 'Calendar extension',
+	'calendar-desc'            => 'Adds a parser function to show a calendar',
 );
 
 $messages['qqq'] = array(
