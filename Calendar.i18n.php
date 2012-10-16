@@ -22,6 +22,20 @@ $messages['de'] = array(
 	'calendar-desc' => 'Ausgabe eines Kalenders',
 );
 
+/** Spanish (español)
+ * @author Armando-Martin
+ */
+$messages['es'] = array(
+	'calendar-desc' => 'Añade una función analítica para mostrar un calendario',
+);
+
+/** Galician (galego)
+ * @author Toliño
+ */
+$messages['gl'] = array(
+	'calendar-desc' => 'Engade unha función analítica para mostrar un calendario',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
@@ -34,5 +48,12 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'calendar-desc' => 'カレンダーを表示するパーサー関数を追加する',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'calendar-desc' => 'Додава парсерска функција за приказ на календар',
 );
 
