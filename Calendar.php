@@ -25,7 +25,7 @@ $wgExtensionCredits['parserhook']['Calendar'] = array(
 	'url' => 'http://www.wikivoyage.org/tech/Calendar_extension',
 	'descriptionmsg' => 'calendar-desc',
 	'author' => 'Roland Unger',
-	'version' => '1.03'
+	'version' => '1.1'
 );
 
 $wgHooks['LanguageGetMagic'][] = 'wfCalendarLanguageGetMagic';
