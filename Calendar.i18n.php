@@ -17,6 +17,13 @@ $messages['qqq'] = array(
 	'calendar-desc' => '{{desc}}',
 );
 
+/** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
+ * @author Wizardist
+ */
+$messages['be-tarask'] = array(
+	'calendar-desc' => 'Дадае функцыю парсэра, што паказвае каляндар',
+);
+
 /** German (Deutsch) */
 $messages['de'] = array(
 	'calendar-desc' => 'Ausgabe eines Kalenders',
@@ -48,6 +55,13 @@ $messages['it'] = array(
  */
 $messages['ja'] = array(
 	'calendar-desc' => 'カレンダーを表示するパーサー関数を追加する',
+);
+
+/** Korean (한국어)
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'calendar-desc' => '달력을 보여주는 파서 함수 추가',
 );
 
 /** Macedonian (македонски)
