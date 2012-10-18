@@ -43,6 +43,13 @@ $messages['gl'] = array(
 	'calendar-desc' => 'Engade unha función analítica para mostrar un calendario',
 );
 
+/** Upper Sorbian (hornjoserbsce)
+ * @author Michawiki
+ */
+$messages['hsb'] = array(
+	'calendar-desc' => 'Přidawa parserowu funkciju, zo by so protyka pokazała',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
