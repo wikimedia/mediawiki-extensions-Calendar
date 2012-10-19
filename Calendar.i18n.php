@@ -29,6 +29,13 @@ $messages['de'] = array(
 	'calendar-desc' => 'Ausgabe eines Kalenders',
 );
 
+/** Lower Sorbian (dolnoserbski)
+ * @author Michawiki
+ */
+$messages['dsb'] = array(
+	'calendar-desc' => 'Pśidawa parserowu funkciju, aby se pratyja pokazała',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
