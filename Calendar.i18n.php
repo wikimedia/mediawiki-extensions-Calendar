@@ -85,3 +85,10 @@ $messages['mk'] = array(
 	'calendar-desc' => 'Додава парсерска функција за приказ на календар',
 );
 
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'calendar-desc' => 'Voegt een parserfunctie toe om een kalender weer te geven',
+);
+
