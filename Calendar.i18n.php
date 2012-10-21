@@ -4,12 +4,12 @@
  *
  * @package MediaWiki
  * @subpackage Extensions
-*/
+ */
 
 $messages = array();
 
 $messages['en'] = array(
-	'calendar-desc'            => 'Adds a parser function to show a calendar',
+	'calendar-desc' => 'Adds a parser function to show a calendar',
 );
 
 /** Message documentation (Message documentation)
