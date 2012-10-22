@@ -12,7 +12,8 @@ $messages['en'] = array(
 	'calendar-desc'            => 'Adds a parser function to show a calendar',
 );
 
-/** Message documentation (Message documentation) */
+/** Message documentation (Message documentation)
+ */
 $messages['qqq'] = array(
 	'calendar-desc' => '{{desc}}',
 );
@@ -24,7 +25,8 @@ $messages['be-tarask'] = array(
 	'calendar-desc' => 'Дадае функцыю парсэра, што паказвае каляндар',
 );
 
-/** German (Deutsch) */
+/** German (Deutsch)
+ */
 $messages['de'] = array(
 	'calendar-desc' => 'Ausgabe eines Kalenders',
 );
@@ -78,6 +80,13 @@ $messages['ko'] = array(
 	'calendar-desc' => '달력을 보여주는 파서 함수 추가',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'calendar-desc' => 'Setzt eng Parser-Fonctioun derbäi fir e Kalenner ze weisen',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
@@ -91,4 +100,3 @@ $messages['mk'] = array(
 $messages['nl'] = array(
 	'calendar-desc' => 'Voegt een parserfunctie toe om een kalender weer te geven',
 );
-
