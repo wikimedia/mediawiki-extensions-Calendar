@@ -18,6 +18,13 @@ $messages['qqq'] = array(
 	'calendar-desc' => '{{desc}}',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'calendar-desc' => "Amiesta una función analítica p'amosar un calendariu",
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
@@ -92,6 +99,13 @@ $messages['lb'] = array(
  */
 $messages['mk'] = array(
 	'calendar-desc' => 'Додава парсерска функција за приказ на календар',
+);
+
+/** Malay (Bahasa Melayu)
+ * @author Anakmalaysia
+ */
+$messages['ms'] = array(
+	'calendar-desc' => 'Menambahkan fungsi penghurai (parser) untuk memaparkan kalendar',
 );
 
 /** Dutch (Nederlands)
