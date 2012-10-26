@@ -59,6 +59,13 @@ $messages['gl'] = array(
 	'calendar-desc' => 'Engade unha función analítica para mostrar un calendario',
 );
 
+/** Hebrew (עברית)
+ * @author Amire80
+ */
+$messages['he'] = array(
+	'calendar-desc' => 'פונקציית מפענח להצגת לוח שנה',
+);
+
 /** Upper Sorbian (hornjoserbsce)
  * @author Michawiki
  */
