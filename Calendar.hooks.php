@@ -18,6 +18,8 @@ class CalendarHooks {
 	 * @return string
 	 */
 	public static function calendarMagicWord( &$parser ) {
+		$parser->getOutput()->addModuleStyles( 'ext.calendar' );
+
 		$args = func_get_args();
 		array_shift( $args );
 
