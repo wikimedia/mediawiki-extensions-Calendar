@@ -52,6 +52,13 @@ $messages['es'] = array(
 	'calendar-desc' => 'Añade una función analítica para mostrar un calendario',
 );
 
+/** French (français)
+ * @author Gomoko
+ */
+$messages['fr'] = array(
+	'calendar-desc' => "Ajoute une fonction d'analyse pour afficher un calendrier",
+);
+
 /** Galician (galego)
  * @author Toliño
  */
