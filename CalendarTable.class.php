@@ -2,29 +2,29 @@
 
 // @todo FIXME: PHP4 all over. Needs a cleanup.
 class CalendarTable {
-	var $lng = 'content';
-	var $prevLink = '';
-	var $nextLink = '';
-	var $calTitle = '';
-	var $highlightedDays = '';
-	var $dailyLinks = array();
-	var $weekStart = 0;
-	var $position = '';
-	var $titleLink = '';
-	var $generalLinks = '';
-	var $dayCharsCount = 0;
-	var $monthCharsCount = 0;
-	var $tableWidth = 'default';
-	var $showToday = true;
+	protected $lng = 'content';
+	protected $prevLink = '';
+	protected $nextLink = '';
+	protected $calTitle = '';
+	protected $highlightedDays = '';
+	protected $dailyLinks = array();
+	protected $weekStart = 0;
+	protected $position = '';
+	protected $titleLink = '';
+	protected $generalLinks = '';
+	protected $dayCharsCount = 0;
+	protected $monthCharsCount = 0;
+	protected $tableWidth = 'default';
+	protected $showToday = true;
 
-	var $today, $curDay, $curMonth, $curYear, $month, $year;
-	var $monthArr, $dayArr;
+	protected $today, $curDay, $curMonth, $curYear, $month, $year;
+	protected $monthArr, $dayArr;
 
 	/**
 	 * @param $timestamp
 	 * @return int
 	 */
-	function dayOfWeek( $timestamp ) {
+	public function dayOfWeek( $timestamp ) {
 		return intval( strftime( "%w", $timestamp ) );
 	}
 
@@ -33,7 +33,7 @@ class CalendarTable {
 	 * @param $aYear
 	 * @return int
 	 */
-	function daysInMonth( $aMonth, $aYear ) {
+	public function daysInMonth( $aMonth, $aYear ) {
 		for ( $day = 27; checkdate( $aMonth, $day, $aYear ); $day++ ) {
 		}
 		return --$day;
@@ -43,7 +43,7 @@ class CalendarTable {
 	 * @param $aYear
 	 * @return bool
 	 */
-	function isLeapYear( $aYear ) {
+	public function isLeapYear( $aYear ) {
 		return $this->daysInMonth( 2, $aYear ) == 29;
 	}
 
@@ -52,7 +52,7 @@ class CalendarTable {
 	 * @param $aYear
 	 * @return int
 	 */
-	function dayOfWeekOfFirstOfMonth( $aMonth, $aYear ) {
+	public function dayOfWeekOfFirstOfMonth( $aMonth, $aYear ) {
 		return $this->dayOfWeek( mktime( 0, 0, 0, $aMonth, 1, $aYear ) );
 	}
 
@@ -61,7 +61,7 @@ class CalendarTable {
 	 * @param $aLen
 	 * @return string
 	 */
-	function getMonthName( $aMonth, $aLen ) {
+	public function getMonthName( $aMonth, $aLen ) {
 		$out = $this->getLang()->getMonthName( $aMonth );
 		return $this->cutLength( $out, $aLen );
 	}
@@ -71,7 +71,7 @@ class CalendarTable {
 	 * @param $aLen
 	 * @return string
 	 */
-	function getMonthNameAbbrev( $aMonth, $aLen ) {
+	public function getMonthNameAbbrev( $aMonth, $aLen ) {
 		$out = $this->getLang()->getMonthAbbreviation( $aMonth );
 		return $this->cutLength( $out, $aLen );
 	}
@@ -81,7 +81,7 @@ class CalendarTable {
 	 * @param $aLen
 	 * @return string
 	 */
-	function getWeekday( $aDay, $aLen ) {
+	public function getWeekday( $aDay, $aLen ) {
 		// Language::getWeekdayName will subtract 1 from key
 		$out = $this->getLang()->getWeekdayName( $aDay % 7 + 1 );
 		return $this->cutLength( $out, $aLen );
@@ -92,7 +92,7 @@ class CalendarTable {
 	 * @param $aLen
 	 * @return string
 	 */
-	function getWeekdayAbbrev( $aDay, $aLen ) {
+	public function getWeekdayAbbrev( $aDay, $aLen ) {
 		// Language::getWeekdayAbbreviation will subtract 1 from key
 		$out = $this->getLang()->getWeekdayAbbreviation( $aDay % 7 + 1 );
 		return $this->cutLength( $out, $aLen );
@@ -105,7 +105,7 @@ class CalendarTable {
 	 */
 	private function cutLength( $string, $len ) {
 		if ( $len > 0 ) {
-			$string = substr( $string, 0, $len );
+			$string = mb_substr( $string, 0, $len );
 		}
 		return ucfirst( $string );
 	}
@@ -127,7 +127,7 @@ class CalendarTable {
 	 * @param $array
 	 * @return mixed
 	 */
-	function replace( $str, $array ) {
+	public function replace( $str, $array ) {
 		foreach ( $array as $key => $val ) {
 			$str = str_replace( '$' . $key, $val, $str );
 		}
@@ -137,11 +137,7 @@ class CalendarTable {
 	/**
 	 * @return string
 	 */
-	function buildTable() {
-		global $wgOut;
-		// TODO: Find a better place for this
-		$wgOut->addModuleStyles( 'ext.calendar' );
-
+	public function buildTable() {
 		$day1 = $this->dayOfWeekOfFirstOfMonth( $this->month, $this->year );
 		if ( ( $this->weekStart > 0 ) && ( $day1 == 0 ) ) {
 			$day1 = 7;
@@ -249,7 +245,7 @@ class CalendarTable {
 	/**
 	 * @param $args array
 	 */
-	function setParameters( &$args ) {
+	public function setParameters( &$args ) {
 		$this->today = strtotime( "now" );
 		$this->curDay = intval( strftime( "%d", $this->today ) );
 		$this->curMonth = intval( strftime( "%m", $this->today ) );
