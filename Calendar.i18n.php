@@ -128,3 +128,10 @@ $messages['ms'] = array(
 $messages['nl'] = array(
 	'calendar-desc' => 'Voegt een parserfunctie toe om een kalender weer te geven',
 );
+
+/** Polish (polski)
+ * @author Vuh
+ */
+$messages['pl'] = array(
+	'calendar-desc' => 'Dodaje funkcję parsera do wyświetlonego kalendarza',
+);
