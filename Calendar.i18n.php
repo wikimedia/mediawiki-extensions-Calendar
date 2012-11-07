@@ -122,6 +122,13 @@ $messages['ms'] = array(
 	'calendar-desc' => 'Menambahkan fungsi penghurai (parser) untuk memaparkan kalendar',
 );
 
+/** Norwegian Bokmål (norsk (bokmål)‎)
+ * @author Event
+ */
+$messages['nb'] = array(
+	'calendar-desc' => 'Legger til en parserfunksjon for å vise frem en kalender',
+);
+
 /** Dutch (Nederlands)
  * @author Siebrand
  */
