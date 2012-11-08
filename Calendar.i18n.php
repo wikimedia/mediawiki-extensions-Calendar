@@ -32,6 +32,13 @@ $messages['be-tarask'] = array(
 	'calendar-desc' => 'Дадае функцыю парсэра, што паказвае каляндар',
 );
 
+/** Danish (dansk)
+ * @author Christian List
+ */
+$messages['da'] = array(
+	'calendar-desc' => 'Tilføjer en parserfunktion til at få vist en kalender',
+);
+
 /** German (Deutsch)
  */
 $messages['de'] = array(
@@ -141,4 +148,11 @@ $messages['nl'] = array(
  */
 $messages['pl'] = array(
 	'calendar-desc' => 'Dodaje funkcję parsera do wyświetlonego kalendarza',
+);
+
+/** Vietnamese (Tiếng Việt)
+ * @author Minh Nguyen
+ */
+$messages['vi'] = array(
+	'calendar-desc' => 'Thêm hàm cú pháp để hiển thị lịch',
 );
