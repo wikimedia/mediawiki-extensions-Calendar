@@ -13,9 +13,10 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  */
 $messages['qqq'] = array(
-	'calendar-desc' => '{{desc}}',
+	'calendar-desc' => '{{desc|name=Calendar|url=http://www.mediawiki.org/wiki/Extension:Calendar}}',
 );
 
 /** Asturian (asturianu)
