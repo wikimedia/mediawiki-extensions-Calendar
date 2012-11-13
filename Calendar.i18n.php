@@ -53,6 +53,13 @@ $messages['dsb'] = array(
 	'calendar-desc' => 'Pśidawa parserowu funkciju, aby se pratyja pokazała',
 );
 
+/** Greek (Ελληνικά)
+ * @author Glavkos
+ */
+$messages['el'] = array(
+	'calendar-desc' => 'Προσθέτει μια parser function για την εμφάνιση ενός ημερολογίου',
+);
+
 /** Spanish (español)
  * @author Armando-Martin
  */
