@@ -67,6 +67,13 @@ $messages['es'] = array(
 	'calendar-desc' => 'Añade una función analítica para mostrar un calendario',
 );
 
+/** Persian (فارسی)
+ * @author ZxxZxxZ
+ */
+$messages['fa'] = array(
+	'calendar-desc' => 'یک تابع تجزیه‌کننده را برای نمایش تقویم می‌افزاید',
+);
+
 /** French (français)
  * @author Gomoko
  */
@@ -156,6 +163,13 @@ $messages['nl'] = array(
  */
 $messages['pl'] = array(
 	'calendar-desc' => 'Dodaje funkcję parsera do wyświetlonego kalendarza',
+);
+
+/** Piedmontese (Piemontèis)
+ * @author Dragonòt
+ */
+$messages['pms'] = array(
+	'calendar-desc' => 'A gionta na funsion dël parser për smon-e un calendari',
 );
 
 /** Vietnamese (Tiếng Việt)
