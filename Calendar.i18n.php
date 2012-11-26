@@ -166,10 +166,11 @@ $messages['pl'] = array(
 );
 
 /** Piedmontese (Piemontèis)
+ * @author Borichèt
  * @author Dragonòt
  */
 $messages['pms'] = array(
-	'calendar-desc' => 'A gionta na funsion dël parser për smon-e un calendari',
+	'calendar-desc' => "A gionta na funsion d'anàlisi për smon-e un calendari",
 );
 
 /** Vietnamese (Tiếng Việt)
