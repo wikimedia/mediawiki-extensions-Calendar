@@ -179,3 +179,10 @@ $messages['pms'] = array(
 $messages['vi'] = array(
 	'calendar-desc' => 'Thêm hàm cú pháp để hiển thị lịch',
 );
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'calendar-desc' => 'פארזער פונקציע פאר ווייזן א קאלענדאר',
+);
