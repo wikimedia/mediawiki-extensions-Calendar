@@ -160,9 +160,10 @@ $messages['nl'] = array(
 
 /** Polish (polski)
  * @author Vuh
+ * @author Woytecr
  */
 $messages['pl'] = array(
-	'calendar-desc' => 'Dodaje funkcję parsera do wyświetlonego kalendarza',
+	'calendar-desc' => 'Dodaje funkcję parsera wyświetlającą kalendarz',
 );
 
 /** Piedmontese (Piemontèis)
