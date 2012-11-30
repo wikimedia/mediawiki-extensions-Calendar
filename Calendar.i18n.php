@@ -174,6 +174,13 @@ $messages['pms'] = array(
 	'calendar-desc' => "A gionta na funsion d'anàlisi për smon-e un calendari",
 );
 
+/** Swedish (svenska)
+ * @author WikiPhoenix
+ */
+$messages['sv'] = array(
+	'calendar-desc' => 'Lägger till en parserfunktion för att visa en kalender',
+);
+
 /** Vietnamese (Tiếng Việt)
  * @author Minh Nguyen
  */
