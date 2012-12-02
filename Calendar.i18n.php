@@ -67,6 +67,13 @@ $messages['es'] = array(
 	'calendar-desc' => 'Añade una función analítica para mostrar un calendario',
 );
 
+/** Basque (euskara)
+ * @author Theklan
+ */
+$messages['eu'] = array(
+	'calendar-desc' => 'Parser funtzio bat gehitzen du egutegi bat erakusteko',
+);
+
 /** Persian (فارسی)
  * @author ZxxZxxZ
  */
@@ -179,6 +186,13 @@ $messages['pms'] = array(
  */
 $messages['sv'] = array(
 	'calendar-desc' => 'Lägger till en parserfunktion för att visa en kalender',
+);
+
+/** Ukrainian (українська)
+ * @author Base
+ */
+$messages['uk'] = array(
+	'calendar-desc' => 'Додає функцію парсеру, що показує календар',
 );
 
 /** Vietnamese (Tiếng Việt)
