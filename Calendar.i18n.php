@@ -26,6 +26,13 @@ $messages['ast'] = array(
 	'calendar-desc' => "Amiesta una función analítica p'amosar un calendariu",
 );
 
+/** South Azerbaijani (تورکجه)
+ * @author Mousa
+ */
+$messages['azb'] = array(
+	'calendar-desc' => 'بیر تقویم گؤسترمک اوچون بیر آیریشدیران فونکسیاسی آرتیرار',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
