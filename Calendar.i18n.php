@@ -40,6 +40,13 @@ $messages['be-tarask'] = array(
 	'calendar-desc' => 'Дадае функцыю парсэра, што паказвае каляндар',
 );
 
+/** Czech (česky)
+ * @author Reaperman
+ */
+$messages['cs'] = array(
+	'calendar-desc' => 'Přidává funkci parseru pro zobrazení kalendáře',
+);
+
 /** Danish (dansk)
  * @author Christian List
  */
@@ -114,6 +121,13 @@ $messages['he'] = array(
  */
 $messages['hsb'] = array(
 	'calendar-desc' => 'Přidawa parserowu funkciju, zo by so protyka pokazała',
+);
+
+/** Indonesian (Bahasa Indonesia)
+ * @author Farras
+ */
+$messages['id'] = array(
+	'calendar-desc' => 'Menambahkan fungsi parser untuk menampilkan kalender',
 );
 
 /** Italian (italiano)
