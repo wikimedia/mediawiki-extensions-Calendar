@@ -202,6 +202,20 @@ $messages['pms'] = array(
 	'calendar-desc' => "A gionta na funsion d'anàlisi për smon-e un calendari",
 );
 
+/** Romanian (română)
+ * @author Stelistcristi
+ */
+$messages['ro'] = array(
+	'calendar-desc' => 'Adaugă o funcție parser pentru a afișa un calendar',
+);
+
+/** Russian (русский)
+ * @author Kaganer
+ */
+$messages['ru'] = array(
+	'calendar-desc' => 'Добавляет функцию парсера для показа календаря',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
