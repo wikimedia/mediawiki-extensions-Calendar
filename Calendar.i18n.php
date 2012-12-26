@@ -95,6 +95,13 @@ $messages['fa'] = array(
 	'calendar-desc' => 'یک تابع تجزیه‌کننده را برای نمایش تقویم می‌افزاید',
 );
 
+/** Finnish (suomi)
+ * @author VezonThunder
+ */
+$messages['fi'] = array(
+	'calendar-desc' => 'Lisää parseritoiminnon, joka näyttää kalenterin',
+);
+
 /** French (français)
  * @author Gomoko
  */
@@ -242,4 +249,11 @@ $messages['vi'] = array(
  */
 $messages['yi'] = array(
 	'calendar-desc' => 'פארזער פונקציע פאר ווייזן א קאלענדאר',
+);
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Waihorace
+ */
+$messages['zh-hant'] = array(
+	'calendar-desc' => '增加解析器函數來顯示日曆',
 );
