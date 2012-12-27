@@ -193,6 +193,13 @@ $messages['nl'] = array(
 	'calendar-desc' => 'Voegt een parserfunctie toe om een kalender weer te geven',
 );
 
+/** Norwegian Nynorsk (norsk (nynorsk)‎)
+ * @author Njardarlogar
+ */
+$messages['nn'] = array(
+	'calendar-desc' => 'Legg til ein parserfunksjon for å visa ein kalender',
+);
+
 /** Polish (polski)
  * @author Vuh
  * @author Woytecr
