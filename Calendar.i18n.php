@@ -258,6 +258,13 @@ $messages['yi'] = array(
 	'calendar-desc' => 'פארזער פונקציע פאר ווייזן א קאלענדאר',
 );
 
+/** Simplified Chinese (中文（简体）‎)
+ * @author Dimension
+ */
+$messages['zh-hans'] = array(
+	'calendar-desc' => '添加parser函数来显示一个日历',
+);
+
 /** Traditional Chinese (中文（繁體）‎)
  * @author Waihorace
  */
