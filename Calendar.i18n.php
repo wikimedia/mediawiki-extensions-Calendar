@@ -230,6 +230,20 @@ $messages['ru'] = array(
 	'calendar-desc' => 'Добавляет функцию парсера для показа календаря',
 );
 
+/** Sinhala (සිංහල)
+ * @author පසිඳු කාවින්ද
+ */
+$messages['si'] = array(
+	'calendar-desc' => 'දින දසුන පෙන්වීම සඳහා ව්‍යාකරණ විග්‍රහ කෘත්‍යක් එක් කරයි',
+);
+
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Rancher
+ */
+$messages['sr-ec'] = array(
+	'calendar-desc' => 'Додаје функцију рашчлањивања за приказ календара',
+);
+
 /** Swedish (svenska)
  * @author WikiPhoenix
  */
