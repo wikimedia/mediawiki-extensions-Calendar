@@ -223,6 +223,13 @@ $messages['ro'] = array(
 	'calendar-desc' => 'Adaugă o funcție parser pentru a afișa un calendar',
 );
 
+/** tarandíne (tarandíne)
+ * @author Joetaras
+ */
+$messages['roa-tara'] = array(
+	'calendar-desc' => "Aggiunge 'na funzione analizzatrice pe fà vedè 'nu calendarije",
+);
+
 /** Russian (русский)
  * @author Kaganer
  */
