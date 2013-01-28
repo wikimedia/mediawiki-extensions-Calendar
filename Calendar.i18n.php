@@ -272,6 +272,13 @@ $messages['vi'] = array(
 	'calendar-desc' => 'Thêm hàm cú pháp để hiển thị lịch',
 );
 
+/** Waray (Winaray)
+ * @author Harvzsf
+ */
+$messages['war'] = array(
+	'calendar-desc' => 'Nagdudugang hin parser nga funsyon pagpakita hin kalendaryo',
+);
+
 /** Yiddish (ייִדיש)
  * @author פוילישער
  */
