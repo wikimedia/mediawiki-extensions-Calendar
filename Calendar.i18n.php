@@ -165,6 +165,13 @@ $messages['lb'] = array(
 	'calendar-desc' => 'Setzt eng Parser-Fonctioun derbäi fir e Kalenner ze weisen',
 );
 
+/** Minangkabau (Baso Minangkabau)
+ * @author Iwan Novirion
+ */
+$messages['min'] = array(
+	'calendar-desc' => 'Tambahkan fungsi parser untuak manampilkan kalender',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
