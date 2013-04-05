@@ -40,6 +40,13 @@ $messages['be-tarask'] = array(
 	'calendar-desc' => 'Дадае функцыю парсэра, што паказвае каляндар',
 );
 
+/** Catalan (català)
+ * @author Pintor Smeargle
+ */
+$messages['ca'] = array(
+	'calendar-desc' => 'Afegeix una funció analitzador sintàctic per mostrar un calendari',
+);
+
 /** Czech (česky)
  * @author Reaperman
  */
