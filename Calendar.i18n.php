@@ -193,6 +193,13 @@ $messages['mk'] = array(
 	'calendar-desc' => 'Додава парсерска функција за приказ на календар',
 );
 
+/** Malayalam (മലയാളം)
+ * @author Praveenp
+ */
+$messages['ml'] = array(
+	'calendar-desc' => 'കാലഗണനാരീതി പ്രദർശിപ്പിക്കുന്നതിനുള്ള ഒരു പാഴ്‌സർ ഫങ്ഷൻ കൂട്ടിച്ചേർക്കുന്നു',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
