@@ -265,6 +265,13 @@ $messages['ru'] = array(
 	'calendar-desc' => 'Добавляет функцию парсера для показа календаря',
 );
 
+/** Serbo-Croatian (srpskohrvatski / српскохрватски)
+ * @author OC Ripper
+ */
+$messages['sh'] = array(
+	'calendar-desc' => 'Dodaje parser funkciju kako bi prikazao kalendar',
+);
+
 /** Sinhala (සිංහල)
  * @author පසිඳු කාවින්ද
  */
