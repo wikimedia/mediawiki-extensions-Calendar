@@ -214,7 +214,7 @@ $messages['ms'] = array(
 	'calendar-desc' => 'Menambahkan fungsi penghurai (parser) untuk memaparkan kalendar',
 );
 
-/** Norwegian Bokmål (norsk (bokmål)‎)
+/** Norwegian Bokmål (norsk bokmål)
  * @author Event
  */
 $messages['nb'] = array(
@@ -228,7 +228,7 @@ $messages['nl'] = array(
 	'calendar-desc' => 'Voegt een parserfunctie toe om een kalender weer te geven',
 );
 
-/** Norwegian Nynorsk (norsk (nynorsk)‎)
+/** Norwegian Nynorsk (norsk nynorsk)
  * @author Njardarlogar
  */
 $messages['nn'] = array(
