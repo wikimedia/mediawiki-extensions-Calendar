@@ -144,6 +144,13 @@ $messages['id'] = array(
 	'calendar-desc' => 'Menambahkan fungsi parser untuk menampilkan kalender',
 );
 
+/** Iloko (Ilokano)
+ * @author Lam-ang
+ */
+$messages['ilo'] = array(
+	'calendar-desc' => 'Agnayon ti annong ti parser tapno mangipakita ti kalendario',
+);
+
 /** Italian (italiano)
  * @author Beta16
  */
