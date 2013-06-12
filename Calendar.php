@@ -17,7 +17,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 $wgExtensionCredits['parserhook']['Calendar'] = array(
 	'path' => __FILE__,
 	'name' => 'Calendar',
-	'url' => 'http://www.wikivoyage.org/tech/Calendar_extension', // @todo FIXME: Create on mediawiki.org.
+	'url' => 'https://www.mediawiki.org/wiki/Extension:Calendar-Wikivoyage',
 	'descriptionmsg' => 'calendar-desc',
 	'author' => 'Roland Unger',
 	'version' => '1.1'
