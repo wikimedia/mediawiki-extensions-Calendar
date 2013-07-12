@@ -286,6 +286,13 @@ $messages['si'] = array(
 	'calendar-desc' => 'දින දසුන පෙන්වීම සඳහා ව්‍යාකරණ විග්‍රහ කෘත්‍යක් එක් කරයි',
 );
 
+/** Slovak (slovenčina)
+ * @author Sudo77(new)
+ */
+$messages['sk'] = array(
+	'calendar-desc' => 'Pridáva funkciu parsera pre zobrazenie kalendára',
+);
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Rancher
  */
