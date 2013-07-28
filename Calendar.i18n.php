@@ -137,6 +137,13 @@ $messages['hsb'] = array(
 	'calendar-desc' => 'Přidawa parserowu funkciju, zo by so protyka pokazała',
 );
 
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'calendar-desc' => 'Adde un function al analysator syntactic pro monstrar un calendario',
+);
+
 /** Indonesian (Bahasa Indonesia)
  * @author Farras
  */
