@@ -214,6 +214,13 @@ $messages['ml'] = array(
 	'calendar-desc' => 'കാലഗണനാരീതി പ്രദർശിപ്പിക്കുന്നതിനുള്ള ഒരു പാഴ്‌സർ ഫങ്ഷൻ കൂട്ടിച്ചേർക്കുന്നു',
 );
 
+/** Marathi (मराठी)
+ * @author V.narsikar
+ */
+$messages['mr'] = array(
+	'calendar-desc' => 'दिनदर्शिका दाखविण्यास एक पार्सर-क्रिया जोडते',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
