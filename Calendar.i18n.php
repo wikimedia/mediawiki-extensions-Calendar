@@ -321,6 +321,13 @@ $messages['sv'] = array(
 	'calendar-desc' => 'Lägger till en parserfunktion för att visa en kalender',
 );
 
+/** Tatar (Cyrillic script) (татарча)
+ * @author Ajdar
+ */
+$messages['tt-cyrl'] = array(
+	'calendar-desc' => 'Календарьне күрсәтер өчен парсер функциясен өсти',
+);
+
 /** Ukrainian (українська)
  * @author Base
  */
