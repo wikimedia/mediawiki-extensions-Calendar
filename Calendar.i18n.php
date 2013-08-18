@@ -176,7 +176,7 @@ $messages['ja'] = array(
  * @author 아라
  */
 $messages['ko'] = array(
-	'calendar-desc' => '달력을 보여주는 파서 함수 추가',
+	'calendar-desc' => '달력을 보여주는 파서 함수를 추가합니다',
 );
 
 /** Colognian (Ripoarisch)
