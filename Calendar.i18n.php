@@ -265,6 +265,13 @@ $messages['pms'] = array(
 	'calendar-desc' => "A gionta na funsion d'anàlisi për smon-e un calendari",
 );
 
+/** Portuguese (português)
+ * @author Fúlvio
+ */
+$messages['pt'] = array(
+	'calendar-desc' => 'Adiciona uma função analítica para mostrar um calendário',
+);
+
 /** Romanian (română)
  * @author Stelistcristi
  */
