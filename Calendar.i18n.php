@@ -193,6 +193,13 @@ $messages['lb'] = array(
 	'calendar-desc' => 'Setzt eng Parser-Fonctioun derbäi fir e Kalenner ze weisen',
 );
 
+/** Basa Banyumasan (Basa Banyumasan)
+ * @author StefanusRA
+ */
+$messages['map-bms'] = array(
+	'calendar-desc' => 'Nambahna fungsi parser kanggo nidokna kalender',
+);
+
 /** Minangkabau (Baso Minangkabau)
  * @author Iwan Novirion
  */
