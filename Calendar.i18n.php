@@ -33,6 +33,13 @@ $messages['azb'] = array(
 	'calendar-desc' => 'بیر تقویم گؤسترمک اوچون بیر آیریشدیران فونکسیاسی آرتیرار',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'calendar-desc' => 'Minadugang nin sarong punksyon nin parabangay tanganing maipahiling an sarong kalendaryo',
+);
+
 /** Belarusian (Taraškievica orthography) (беларуская (тарашкевіца)‎)
  * @author Wizardist
  */
