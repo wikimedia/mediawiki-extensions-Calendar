@@ -286,6 +286,13 @@ $messages['pt'] = array(
 	'calendar-desc' => 'Adiciona uma função analítica para mostrar um calendário',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
+ */
+$messages['pt-br'] = array(
+	'calendar-desc' => 'Adiciona uma função sintática para a exibição de um calendário',
+);
+
 /** Romanian (română)
  * @author Stelistcristi
  */
