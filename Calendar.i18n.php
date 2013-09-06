@@ -61,6 +61,13 @@ $messages['cs'] = array(
 	'calendar-desc' => 'Přidává funkci parseru pro zobrazení kalendáře',
 );
 
+/** Welsh (Cymraeg)
+ * @author Lloffiwr
+ */
+$messages['cy'] = array(
+	'calendar-desc' => "Yn ychwanegu ffwythiant dosrannu sy'n dangos calendr",
+);
+
 /** Danish (dansk)
  * @author Christian List
  */
