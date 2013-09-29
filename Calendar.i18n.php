@@ -102,6 +102,13 @@ $messages['es'] = array(
 	'calendar-desc' => 'Añade una función analítica para mostrar un calendario',
 );
 
+/** Estonian (eesti)
+ * @author Pikne
+ */
+$messages['et'] = array(
+	'calendar-desc' => 'Lisab parserifunktsiooni, millega kalendrit näidata.',
+);
+
 /** Basque (euskara)
  * @author Theklan
  */
@@ -125,9 +132,10 @@ $messages['fi'] = array(
 
 /** French (français)
  * @author Gomoko
+ * @author Urhixidur
  */
 $messages['fr'] = array(
-	'calendar-desc' => "Ajoute une fonction d'analyse pour afficher un calendrier",
+	'calendar-desc' => 'Ajoute une fonction d’analyse pour afficher un calendrier',
 );
 
 /** Galician (galego)
@@ -202,9 +210,10 @@ $messages['ksh'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
-	'calendar-desc' => 'Setzt eng Parser-Fonctioun derbäi fir e Kalenner ze weisen',
+	'calendar-desc' => 'Setzt eng Parser-Funktioun derbäi fir e Kalenner ze weisen',
 );
 
 /** Basa Banyumasan (Basa Banyumasan)
