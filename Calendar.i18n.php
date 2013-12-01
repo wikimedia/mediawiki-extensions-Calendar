@@ -365,6 +365,13 @@ $messages['sv'] = array(
 	'calendar-desc' => 'Lägger till en parserfunktion för att visa en kalender',
 );
 
+/** Turkish (Türkçe)
+ * @author Joseph
+ */
+$messages['tr'] = array(
+	'calendar-desc' => 'Bir takvim görüntülemek için bir derleyici fonksiyonu ekler',
+);
+
 /** Tatar (Cyrillic script) (татарча)
  * @author Ajdar
  */
