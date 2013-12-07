@@ -54,7 +54,7 @@ $messages['ca'] = array(
 	'calendar-desc' => 'Afegeix una funció analitzador sintàctic per mostrar un calendari',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Reaperman
  */
 $messages['cs'] = array(
