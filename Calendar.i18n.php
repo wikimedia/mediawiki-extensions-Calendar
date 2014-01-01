@@ -138,6 +138,13 @@ $messages['fr'] = array(
 	'calendar-desc' => 'Ajoute une fonction d’analyse pour afficher un calendrier',
 );
 
+/** Friulian (furlan)
+ * @author Tocaibon
+ */
+$messages['fur'] = array(
+	'calendar-desc' => 'Met lis funzions parser par mostrâ un calendari',
+);
+
 /** Galician (galego)
  * @author Toliño
  */
