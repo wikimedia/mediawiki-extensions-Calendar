@@ -47,6 +47,13 @@ $messages['be-tarask'] = array(
 	'calendar-desc' => 'Дадае функцыю парсэра, што паказвае каляндар',
 );
 
+/** Breton (brezhoneg)
+ * @author Fohanno
+ */
+$messages['br'] = array(
+	'calendar-desc' => "Ouzhpennañ un arc'hwel dielfennañ evit diskouez un deiziadur",
+);
+
 /** Catalan (català)
  * @author Pintor Smeargle
  */
