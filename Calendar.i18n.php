@@ -344,6 +344,13 @@ $messages['ru'] = array(
 	'calendar-desc' => 'Добавляет функцию парсера для показа календаря',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'calendar-desc' => 'Adds ae parser function tae shaw ae calendar',
+);
+
 /** Serbo-Croatian (srpskohrvatski / српскохрватски)
  * @author OC Ripper
  */
