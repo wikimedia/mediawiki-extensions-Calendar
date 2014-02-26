@@ -248,7 +248,7 @@ $messages['min'] = array(
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
-	'calendar-desc' => 'Додава парсерска функција за приказ на календар',
+	'calendar-desc' => 'Додава расчленувачка функција за приказ на календар',
 );
 
 /** Malayalam (മലയാളം)
