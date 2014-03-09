@@ -159,6 +159,13 @@ $messages['gl'] = array(
 	'calendar-desc' => 'Engade unha función analítica para mostrar un calendario',
 );
 
+/** Hawaiian (Hawai`i)
+ * @author Kolonahe
+ */
+$messages['haw'] = array(
+	'calendar-desc' => 'Hoʻohui i kekahi kauhana pāsā no ka hōʻike ʻana i ka ʻalemanaka',
+);
+
 /** Hebrew (עברית)
  * @author Amire80
  */
