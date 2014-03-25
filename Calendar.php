@@ -26,6 +26,7 @@ $wgExtensionCredits['parserhook']['Calendar'] = array(
 $dir = __DIR__ . '/';
 $wgAutoloadClasses['CalendarTable'] = $dir . 'CalendarTable.class.php';
 $wgAutoloadClasses['CalendarHooks'] = $dir . 'Calendar.hooks.php';
+$wgMessagesDirs['Calendar'] = __DIR__ . '/i18n';
 $wgExtensionMessagesFiles['Calendar'] = $dir . 'Calendar.i18n.php';
 $wgExtensionMessagesFiles['CalendarMagic'] = $dir . 'Calendar.i18n.magic.php';
 
