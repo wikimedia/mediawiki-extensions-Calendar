@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Njardarlogar"
-        ]
-    },
-    "calendar-desc": "Legg til ein parserfunksjon for å visa ein kalender"
+	"@metadata": {
+		"authors": [
+			"Njardarlogar"
+		]
+	},
+	"calendar-desc": "Legg til ein parserfunksjon for å visa ein kalender"
 }

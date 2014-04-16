@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Joseph"
-        ]
-    },
-    "calendar-desc": "Bir takvim görüntülemek için bir derleyici fonksiyonu ekler"
+	"@metadata": {
+		"authors": [
+			"Joseph"
+		]
+	},
+	"calendar-desc": "Bir takvim görüntülemek için bir derleyici fonksiyonu ekler"
 }

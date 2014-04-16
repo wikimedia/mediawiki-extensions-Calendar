@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Kaganer"
-        ]
-    },
-    "calendar-desc": "Добавляет функцию парсера для показа календаря"
+	"@metadata": {
+		"authors": [
+			"Kaganer"
+		]
+	},
+	"calendar-desc": "Добавляет функцию парсера для показа календаря"
 }

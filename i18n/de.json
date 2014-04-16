@@ -1,6 +1,4 @@
 {
-    "@metadata": {
-        "authors": []
-    },
-    "calendar-desc": "Ausgabe eines Kalenders"
+	"@metadata": [],
+	"calendar-desc": "Ausgabe eines Kalenders"
 }

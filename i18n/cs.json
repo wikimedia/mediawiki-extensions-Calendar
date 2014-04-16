@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Reaperman"
-        ]
-    },
-    "calendar-desc": "Přidává funkci parseru pro zobrazení kalendáře"
+	"@metadata": {
+		"authors": [
+			"Reaperman"
+		]
+	},
+	"calendar-desc": "Přidává funkci parseru pro zobrazení kalendáře"
 }

@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Pintor Smeargle"
-        ]
-    },
-    "calendar-desc": "Afegeix una funció analitzador sintàctic per mostrar un calendari"
+	"@metadata": {
+		"authors": [
+			"Pintor Smeargle"
+		]
+	},
+	"calendar-desc": "Afegeix una funció analitzador sintàctic per mostrar un calendari"
 }

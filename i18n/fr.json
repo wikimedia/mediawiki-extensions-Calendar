@@ -1,9 +1,9 @@
 {
-    "@metadata": {
-        "authors": [
-            "Gomoko",
-            "Urhixidur"
-        ]
-    },
-    "calendar-desc": "Ajoute une fonction d’analyse pour afficher un calendrier"
+	"@metadata": {
+		"authors": [
+			"Gomoko",
+			"Urhixidur"
+		]
+	},
+	"calendar-desc": "Ajoute une fonction d’analyse pour afficher un calendrier"
 }

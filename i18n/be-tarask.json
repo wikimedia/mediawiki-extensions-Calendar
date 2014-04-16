@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Wizardist"
-        ]
-    },
-    "calendar-desc": "Дадае функцыю парсэра, што паказвае каляндар"
+	"@metadata": {
+		"authors": [
+			"Wizardist"
+		]
+	},
+	"calendar-desc": "Дадае функцыю парсэра, што паказвае каляндар"
 }

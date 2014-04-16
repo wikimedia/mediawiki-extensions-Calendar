@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Rancher"
-        ]
-    },
-    "calendar-desc": "Додаје функцију рашчлањивања за приказ календара"
+	"@metadata": {
+		"authors": [
+			"Rancher"
+		]
+	},
+	"calendar-desc": "Додаје функцију рашчлањивања за приказ календара"
 }

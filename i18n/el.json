@@ -1,8 +1,8 @@
 {
-    "@metadata": {
-        "authors": [
-            "Glavkos"
-        ]
-    },
-    "calendar-desc": "Προσθέτει μια parser function για την εμφάνιση ενός ημερολογίου"
+	"@metadata": {
+		"authors": [
+			"Glavkos"
+		]
+	},
+	"calendar-desc": "Προσθέτει μια parser function για την εμφάνιση ενός ημερολογίου"
 }
