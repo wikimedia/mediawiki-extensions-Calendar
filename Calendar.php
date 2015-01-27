@@ -14,7 +14,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'This file is a MediaWiki extension, it is not a valid entry point' );
 }
 
-$wgExtensionCredits['parserhook']['Calendar'] = array(
+$wgExtensionCredits['parserhook'][] = array(
 	'path' => __FILE__,
 	'name' => 'Calendar',
 	'url' => 'https://www.mediawiki.org/wiki/Extension:Calendar-Wikivoyage',
