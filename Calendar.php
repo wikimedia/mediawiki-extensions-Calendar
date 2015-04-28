@@ -33,6 +33,7 @@ $wgExtensionMessagesFiles['CalendarMagic'] = $dir . 'Calendar.i18n.magic.php';
 $wgHooks['ParserFirstCallInit'][] = 'CalendarHooks::setupParserHooks';
 
 $wgResourceModules['ext.calendar'] = array(
+	'position' => 'top',
 	'styles' => 'ext.calendar.css',
 	'localBasePath' => __DIR__ . '/modules',
 	'remoteExtPath' => 'Calendar/modules',
