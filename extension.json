@@ -29,5 +29,6 @@
 	"AutoloadClasses": {
 		"CalendarTable": "CalendarTable.class.php",
 		"CalendarHooks": "Calendar.hooks.php"
-	}
+	},
+	"manifest_version": 1
 }
