@@ -21,6 +21,7 @@
 	},
 	"ResourceModules": {
 		"ext.calendar": {
+			"position": "top",
 			"styles": "ext.calendar.css",
 			"localBasePath": "modules",
 			"remoteExtPath": "Calendar/modules"
