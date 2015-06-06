@@ -6,7 +6,6 @@
 	"descriptionmsg": "calendar-desc",
 	"type": "parserhook",
 	"ExtensionMessagesFiles": {
-		"Calendar": "Calendar.i18n.php",
 		"CalendarMagic": "Calendar.i18n.magic.php"
 	},
 	"Hooks": {
