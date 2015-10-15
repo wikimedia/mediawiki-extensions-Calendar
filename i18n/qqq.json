@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Shirayuki"
+			"Shirayuki",
+			"Umherirrender"
 		]
 	},
-	"calendar-desc": "{{desc|name=Calendar|url=http://www.mediawiki.org/wiki/Extension:Calendar}}"
+	"calendar-desc": "{{desc|name=Calendar|url=https://www.mediawiki.org/wiki/Extension:Calendar}}"
 }
