@@ -1,5 +1,5 @@
 /*
- * Stylesheet for the Calendar extension 
+ * Stylesheet for the Calendar extension
  *
  * @package MediaWiki
  * @subpackage Extensions
@@ -48,7 +48,7 @@
 }
 
 .calendar .sundays {
-	color: #ff0000;
+	color: #f00;
 }
 
 .calendar .today {
