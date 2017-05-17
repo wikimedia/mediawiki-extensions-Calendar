@@ -6,8 +6,8 @@
  * @subpackage Extensions
  */
 
-$magicWords = array();
+$magicWords = [];
 
-$magicWords['en'] = array(
-	'calendar' => array( 0, 'calendar' )
-);
+$magicWords['en'] = [
+	'calendar' => [ 0, 'calendar' ]
+];

@@ -7,7 +7,7 @@ class CalendarTable {
 	protected $nextLink = '';
 	protected $calTitle = '';
 	protected $highlightedDays = '';
-	protected $dailyLinks = array();
+	protected $dailyLinks = [];
 	protected $weekStart = 0;
 	protected $position = '';
 	protected $titleLink = '';
@@ -34,8 +34,10 @@ class CalendarTable {
 	 * @return int
 	 */
 	public function daysInMonth( $aMonth, $aYear ) {
+		// @codingStandardsIgnoreStart
 		for ( $day = 27; checkdate( $aMonth, $day, $aYear ); $day++ ) {
 		}
+		// @codingStandardsIgnoreEnd
 		return --$day;
 	}
 
@@ -167,7 +169,8 @@ class CalendarTable {
 
 		$colSpan = 5;
 		if ( $this->calTitle == '' ) {
-			$this->calTitle = $this->getMonthName( $this->month, $this->monthCharsCount ) . ' ' . $this->year;
+			$this->calTitle = $this->getMonthName( $this->month, $this->monthCharsCount )
+				. ' ' . $this->year;
 		}
 		if ( $this->titleLink != '' ) {
 			$this->calTitle = '[[' . $this->titleLink . '|' . $this->calTitle . ']]';
@@ -204,7 +207,7 @@ class CalendarTable {
 				$this->dayArr['D'] = $c;
 				$this->dayArr['d'] = sprintf( '%02s', $c );
 				$this->dayArr['e'] = sprintf( '%2s', $c );
-				$styles = array();
+				$styles = [];
 				if ( $i == 0 && $this->weekStart == 0 ) {
 					$styles[] = 'sundays';
 				} elseif ( $i == 6 && $this->weekStart == 1 ) {
@@ -379,7 +382,7 @@ class CalendarTable {
 			$nextMonth = 1;
 			$nextMonthYear++;
 		}
-		$this->monthArr = array(
+		$this->monthArr = [
 			'b' => $this->getMonthNameAbbrev( $this->month, 0 ),
 			'B' => $this->getMonthName( $this->month, 0 ),
 			'm' => sprintf( '%02s', $this->month ),
@@ -395,7 +398,7 @@ class CalendarTable {
 			'R' => sprintf( '%02s', $prevMonth ),
 			'y' => substr( $this->year, 2, 2 ),
 			'Y' => $this->year
-		);
+		];
 		$this->dayArr = $this->monthArr;
 		$this->titleLink = $this->replace( $this->titleLink, $this->monthArr );
 		$this->prevLink = $this->replace( $this->prevLink, $this->monthArr );

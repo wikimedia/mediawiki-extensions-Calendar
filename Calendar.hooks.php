@@ -9,7 +9,7 @@ class CalendarHooks {
 	 * @return bool
 	 */
 	public static function setupParserHooks( $parser ) {
-		$parser->setFunctionHook( 'calendar', array( 'CalendarHooks', 'calendarMagicWord' ) );
+		$parser->setFunctionHook( 'calendar', [ 'CalendarHooks', 'calendarMagicWord' ] );
 		return true;
 	}
 
