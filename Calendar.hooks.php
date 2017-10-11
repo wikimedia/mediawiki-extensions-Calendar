@@ -5,7 +5,7 @@
  */
 class CalendarHooks {
 	/**
-	 * @param $parser Parser
+	 * @param Parser $parser
 	 * @return bool
 	 */
 	public static function setupParserHooks( $parser ) {
@@ -14,7 +14,7 @@ class CalendarHooks {
 	}
 
 	/**
-	 * @param $parser Parser
+	 * @param Parser &$parser
 	 * @return string
 	 */
 	public static function calendarMagicWord( &$parser ) {

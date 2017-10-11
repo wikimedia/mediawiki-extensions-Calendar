@@ -21,7 +21,7 @@ class CalendarTable {
 	protected $monthArr, $dayArr;
 
 	/**
-	 * @param $timestamp
+	 * @param int $timestamp
 	 * @return int
 	 */
 	public function dayOfWeek( $timestamp ) {
@@ -29,8 +29,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aMonth
-	 * @param $aYear
+	 * @param int $aMonth
+	 * @param int $aYear
 	 * @return int
 	 */
 	public function daysInMonth( $aMonth, $aYear ) {
@@ -42,7 +42,7 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aYear
+	 * @param int $aYear
 	 * @return bool
 	 */
 	public function isLeapYear( $aYear ) {
@@ -50,8 +50,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aMonth
-	 * @param $aYear
+	 * @param int $aMonth
+	 * @param int $aYear
 	 * @return int
 	 */
 	public function dayOfWeekOfFirstOfMonth( $aMonth, $aYear ) {
@@ -59,8 +59,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aMonth
-	 * @param $aLen
+	 * @param int $aMonth
+	 * @param int $aLen
 	 * @return string
 	 */
 	public function getMonthName( $aMonth, $aLen ) {
@@ -69,8 +69,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aMonth
-	 * @param $aLen
+	 * @param int $aMonth
+	 * @param int $aLen
 	 * @return string
 	 */
 	public function getMonthNameAbbrev( $aMonth, $aLen ) {
@@ -79,8 +79,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aDay
-	 * @param $aLen
+	 * @param int $aDay
+	 * @param int $aLen
 	 * @return string
 	 */
 	public function getWeekday( $aDay, $aLen ) {
@@ -90,8 +90,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $aDay
-	 * @param $aLen
+	 * @param int $aDay
+	 * @param int $aLen
 	 * @return string
 	 */
 	public function getWeekdayAbbrev( $aDay, $aLen ) {
@@ -101,8 +101,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $string string
-	 * @param $len int
+	 * @param string $string
+	 * @param int $len
 	 * @return string
 	 */
 	private function cutLength( $string, $len ) {
@@ -125,8 +125,8 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $str
-	 * @param $array
+	 * @param string $str
+	 * @param array $array
 	 * @return mixed
 	 */
 	public function replace( $str, $array ) {
@@ -246,7 +246,7 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param $args array
+	 * @param array &$args
 	 */
 	public function setParameters( &$args ) {
 		$this->today = strtotime( "now" );
