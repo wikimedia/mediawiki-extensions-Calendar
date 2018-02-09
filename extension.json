@@ -28,8 +28,8 @@
 		}
 	},
 	"AutoloadClasses": {
-		"CalendarTable": "CalendarTable.class.php",
-		"CalendarHooks": "Calendar.hooks.php"
+		"CalendarTable": "includes/CalendarTable.php",
+		"CalendarHooks": "includes/CalendarHooks.php"
 	},
 	"manifest_version": 1
 }
