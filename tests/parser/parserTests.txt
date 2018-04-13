@@ -6,97 +6,97 @@ Basic #calendar usage
 <table class="calendar calWidth">
 
 <tr>
-<td class="calTitle" colspan="7"> February 2018
+<td class="calTitle" colspan="7">February 2018
 </td></tr>
 <tr>
-<th> Sun
+<th>Sun
 </th>
-<th> Mon
+<th>Mon
 </th>
-<th> Tue
+<th>Tue
 </th>
-<th> Wed
+<th>Wed
 </th>
-<th> Thu
+<th>Thu
 </th>
-<th> Fri
+<th>Fri
 </th>
-<th> Sat
+<th>Sat
 </th></tr>
 <tr>
-<td class="sundays"> &#160;
+<td class="sundays">&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> 1
+<td>1
 </td>
-<td> 2
+<td>2
 </td>
-<td> 3
+<td>3
 </td></tr>
 <tr>
-<td class="sundays"> 4
+<td class="sundays">4
 </td>
-<td> 5
+<td>5
 </td>
-<td> 6
+<td>6
 </td>
-<td> 7
+<td>7
 </td>
-<td> 8
+<td>8
 </td>
-<td> 9
+<td>9
 </td>
-<td> 10
+<td>10
 </td></tr>
 <tr>
-<td class="sundays"> 11
+<td class="sundays">11
 </td>
-<td> 12
+<td>12
 </td>
-<td> 13
+<td>13
 </td>
-<td> 14
+<td>14
 </td>
-<td> 15
+<td>15
 </td>
-<td> 16
+<td>16
 </td>
-<td> 17
+<td>17
 </td></tr>
 <tr>
-<td class="sundays"> 18
+<td class="sundays">18
 </td>
-<td> 19
+<td>19
 </td>
-<td> 20
+<td>20
 </td>
-<td> 21
+<td>21
 </td>
-<td> 22
+<td>22
 </td>
-<td> 23
+<td>23
 </td>
-<td> 24
+<td>24
 </td></tr>
 <tr>
-<td class="sundays"> 25
+<td class="sundays">25
 </td>
-<td> 26
+<td>26
 </td>
-<td> 27
+<td>27
 </td>
-<td> 28
+<td>28
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td></tr></table>
 
 !! end
@@ -109,97 +109,97 @@ Basic #calendar with position
 <table class="calendar calRight calWidth">
 
 <tr>
-<td class="calTitle" colspan="7"> February 2018
+<td class="calTitle" colspan="7">February 2018
 </td></tr>
 <tr>
-<th> Sun
+<th>Sun
 </th>
-<th> Mon
+<th>Mon
 </th>
-<th> Tue
+<th>Tue
 </th>
-<th> Wed
+<th>Wed
 </th>
-<th> Thu
+<th>Thu
 </th>
-<th> Fri
+<th>Fri
 </th>
-<th> Sat
+<th>Sat
 </th></tr>
 <tr>
-<td class="sundays"> &#160;
+<td class="sundays">&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> 1
+<td>1
 </td>
-<td> 2
+<td>2
 </td>
-<td> 3
+<td>3
 </td></tr>
 <tr>
-<td class="sundays"> 4
+<td class="sundays">4
 </td>
-<td> 5
+<td>5
 </td>
-<td> 6
+<td>6
 </td>
-<td> 7
+<td>7
 </td>
-<td> 8
+<td>8
 </td>
-<td> 9
+<td>9
 </td>
-<td> 10
+<td>10
 </td></tr>
 <tr>
-<td class="sundays"> 11
+<td class="sundays">11
 </td>
-<td> 12
+<td>12
 </td>
-<td> 13
+<td>13
 </td>
-<td> 14
+<td>14
 </td>
-<td> 15
+<td>15
 </td>
-<td> 16
+<td>16
 </td>
-<td> 17
+<td>17
 </td></tr>
 <tr>
-<td class="sundays"> 18
+<td class="sundays">18
 </td>
-<td> 19
+<td>19
 </td>
-<td> 20
+<td>20
 </td>
-<td> 21
+<td>21
 </td>
-<td> 22
+<td>22
 </td>
-<td> 23
+<td>23
 </td>
-<td> 24
+<td>24
 </td></tr>
 <tr>
-<td class="sundays"> 25
+<td class="sundays">25
 </td>
-<td> 26
+<td>26
 </td>
-<td> 27
+<td>27
 </td>
-<td> 28
+<td>28
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td></tr></table>
 
 !! end
@@ -212,97 +212,97 @@ Basic #calendar with title
 <table class="calendar calWidth">
 
 <tr>
-<td class="calTitle" colspan="7"> Parser Testing
+<td class="calTitle" colspan="7">Parser Testing
 </td></tr>
 <tr>
-<th> Sun
+<th>Sun
 </th>
-<th> Mon
+<th>Mon
 </th>
-<th> Tue
+<th>Tue
 </th>
-<th> Wed
+<th>Wed
 </th>
-<th> Thu
+<th>Thu
 </th>
-<th> Fri
+<th>Fri
 </th>
-<th> Sat
+<th>Sat
 </th></tr>
 <tr>
-<td class="sundays"> &#160;
+<td class="sundays">&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> 1
+<td>1
 </td>
-<td> 2
+<td>2
 </td>
-<td> 3
+<td>3
 </td></tr>
 <tr>
-<td class="sundays"> 4
+<td class="sundays">4
 </td>
-<td> 5
+<td>5
 </td>
-<td> 6
+<td>6
 </td>
-<td> 7
+<td>7
 </td>
-<td> 8
+<td>8
 </td>
-<td> 9
+<td>9
 </td>
-<td> 10
+<td>10
 </td></tr>
 <tr>
-<td class="sundays"> 11
+<td class="sundays">11
 </td>
-<td> 12
+<td>12
 </td>
-<td> 13
+<td>13
 </td>
-<td> 14
+<td>14
 </td>
-<td> 15
+<td>15
 </td>
-<td> 16
+<td>16
 </td>
-<td> 17
+<td>17
 </td></tr>
 <tr>
-<td class="sundays"> 18
+<td class="sundays">18
 </td>
-<td> 19
+<td>19
 </td>
-<td> 20
+<td>20
 </td>
-<td> 21
+<td>21
 </td>
-<td> 22
+<td>22
 </td>
-<td> 23
+<td>23
 </td>
-<td> 24
+<td>24
 </td></tr>
 <tr>
-<td class="sundays"> 25
+<td class="sundays">25
 </td>
-<td> 26
+<td>26
 </td>
-<td> 27
+<td>27
 </td>
-<td> 28
+<td>28
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td></tr></table>
 
 !! end
@@ -315,97 +315,97 @@ Basic #calendar with highlightedDays
 <table class="calendar calWidth">
 
 <tr>
-<td class="calTitle" colspan="7"> February 2018
+<td class="calTitle" colspan="7">February 2018
 </td></tr>
 <tr>
-<th> Sun
+<th>Sun
 </th>
-<th> Mon
+<th>Mon
 </th>
-<th> Tue
+<th>Tue
 </th>
-<th> Wed
+<th>Wed
 </th>
-<th> Thu
+<th>Thu
 </th>
-<th> Fri
+<th>Fri
 </th>
-<th> Sat
+<th>Sat
 </th></tr>
 <tr>
-<td class="sundays"> &#160;
+<td class="sundays">&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td class="highlighted"> 1
+<td class="highlighted">1
 </td>
-<td> 2
+<td>2
 </td>
-<td> 3
+<td>3
 </td></tr>
 <tr>
-<td class="sundays"> 4
+<td class="sundays">4
 </td>
-<td> 5
+<td>5
 </td>
-<td> 6
+<td>6
 </td>
-<td> 7
+<td>7
 </td>
-<td> 8
+<td>8
 </td>
-<td class="highlighted"> 9
+<td class="highlighted">9
 </td>
-<td> 10
+<td>10
 </td></tr>
 <tr>
-<td class="sundays"> 11
+<td class="sundays">11
 </td>
-<td> 12
+<td>12
 </td>
-<td> 13
+<td>13
 </td>
-<td> 14
+<td>14
 </td>
-<td> 15
+<td>15
 </td>
-<td> 16
+<td>16
 </td>
-<td class="highlighted"> 17
+<td class="highlighted">17
 </td></tr>
 <tr>
-<td class="sundays"> 18
+<td class="sundays">18
 </td>
-<td> 19
+<td>19
 </td>
-<td> 20
+<td>20
 </td>
-<td> 21
+<td>21
 </td>
-<td> 22
+<td>22
 </td>
-<td> 23
+<td>23
 </td>
-<td> 24
+<td>24
 </td></tr>
 <tr>
-<td class="sundays"> 25
+<td class="sundays">25
 </td>
-<td> 26
+<td>26
 </td>
-<td> 27
+<td>27
 </td>
-<td> 28
+<td>28
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td>
-<td> &#160;
+<td>&#160;
 </td></tr></table>
 
 !! end
