@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Toliño"
+			"Toliño",
+			"Elisardojm"
 		]
 	},
-	"calendar-desc": "Engade unha función analítica para mostrar un calendario"
+	"calendar-desc": "Engade unha función analítica para amosar un calendario"
 }
