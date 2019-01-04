@@ -2,23 +2,52 @@
 
 // @todo FIXME: PHP4 all over. Needs a cleanup.
 class CalendarTable {
+
+	/** @var string */
 	protected $lng = 'content';
+	/** @var string */
 	protected $prevLink = '';
+	/** @var string */
 	protected $nextLink = '';
+	/** @var string */
 	protected $calTitle = '';
+	/** @var string[]|string */
 	protected $highlightedDays = '';
+	/** @var string[] */
 	protected $dailyLinks = [];
+	/** @var int */
 	protected $weekStart = 0;
+	/** @var string */
 	protected $position = '';
+	/** @var string */
 	protected $titleLink = '';
+	/** @var string */
 	protected $generalLinks = '';
+	/** @var int */
 	protected $dayCharsCount = 0;
+	/** @var int */
 	protected $monthCharsCount = 0;
+	/** @var string */
 	protected $tableWidth = 'default';
+	/** @var bool */
 	protected $showToday = true;
 
-	protected $today, $curDay, $curMonth, $curYear, $month, $year;
-	protected $monthArr, $dayArr;
+	/** @var int */
+	protected $today;
+	/** @var int */
+	protected $curDay;
+	/** @var int */
+	protected $curMonth;
+	/** @var int */
+	protected $curYear;
+	/** @var int */
+	protected $month;
+	/** @var int */
+	protected $year;
+	/** @var string[] */
+	protected $monthArr;
+	/** @var string[] */
+	protected $dayArr;
 
 	/**
 	 * @param int $timestamp
