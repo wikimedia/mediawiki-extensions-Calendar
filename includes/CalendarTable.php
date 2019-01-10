@@ -1,6 +1,5 @@
 <?php
 
-// @todo FIXME: PHP4 all over. Needs a cleanup.
 class CalendarTable {
 
 	/** @var string */
@@ -11,8 +10,8 @@ class CalendarTable {
 	protected $nextLink = '';
 	/** @var string */
 	protected $calTitle = '';
-	/** @var string[]|string */
-	protected $highlightedDays = '';
+	/** @var string[] */
+	protected $highlightedDays = [];
 	/** @var string[] */
 	protected $dailyLinks = [];
 	/** @var int */
@@ -155,10 +154,10 @@ class CalendarTable {
 
 	/**
 	 * @param string $str
-	 * @param array $array
-	 * @return mixed
+	 * @param string[] $array
+	 * @return string
 	 */
-	public function replace( $str, $array ) {
+	public function replace( $str, array $array ) {
 		foreach ( $array as $key => $val ) {
 			$str = str_replace( '$' . $key, $val, $str );
 		}
@@ -275,9 +274,9 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param array &$args
+	 * @param array $args
 	 */
-	public function setParameters( &$args ) {
+	public function setParameters( array $args ) {
 		$this->today = strtotime( "now" );
 		$this->curDay = intval( strftime( "%d", $this->today ) );
 		$this->curMonth = intval( strftime( "%m", $this->today ) );
@@ -323,7 +322,8 @@ class CalendarTable {
 						$this->calTitle = $parts[1];
 						break;
 					case 'highlightedDays':
-						$this->highlightedDays = $parts[1];
+						$this->highlightedDays =
+							preg_split( '/\s+/', $parts[1], 32, PREG_SPLIT_NO_EMPTY );
 						break;
 					case 'start':
 						$this->weekStart = $parts[1];
@@ -361,9 +361,7 @@ class CalendarTable {
 						}
 						break;
 					case 'showToday':
-						$this->showToday = $parts[1];
-						$this->showToday = ( $this->showToday == 'true' );
-
+						$this->showToday = $parts[1] === 'true';
 						break;
 				}
 			}
@@ -395,9 +393,6 @@ class CalendarTable {
 			$this->month = 12;
 			$this->year = 2037;
 		}
-
-		$this->highlightedDays =
-			preg_split( "/[\s\t\x0a\x0d]+/", $this->highlightedDays, 32, PREG_SPLIT_NO_EMPTY );
 
 		$prevMonthYear = $this->year;
 		$prevMonth = $this->month - 1;

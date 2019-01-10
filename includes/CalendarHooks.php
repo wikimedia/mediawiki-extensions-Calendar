@@ -6,11 +6,9 @@
 class CalendarHooks {
 	/**
 	 * @param Parser $parser
-	 * @return bool
 	 */
-	public static function setupParserHooks( $parser ) {
+	public static function setupParserHooks( Parser $parser ) {
 		$parser->setFunctionHook( 'calendar', [ 'CalendarHooks', 'calendarMagicWord' ] );
-		return true;
 	}
 
 	/**
