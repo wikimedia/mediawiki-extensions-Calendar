@@ -14,14 +14,12 @@ class CalendarHooks {
 	}
 
 	/**
-	 * @param Parser &$parser
+	 * @param Parser $parser
+	 * @param string ...$args
 	 * @return string
 	 */
-	public static function calendarMagicWord( &$parser ) {
+	public static function calendarMagicWord( Parser $parser, ...$args ) {
 		$parser->getOutput()->addModuleStyles( 'ext.calendar' );
-
-		$args = func_get_args();
-		array_shift( $args );
 
 		$calendar = new CalendarTable;
 		$calendar->setParameters( $args );
