@@ -1,5 +1,7 @@
 <?php
 
+use MediaWiki\MediaWikiServices;
+
 class CalendarTable {
 
 	/** @var string */
@@ -148,8 +150,7 @@ class CalendarTable {
 			global $wgLang;
 			return $wgLang;
 		}
-		global $wgContLang;
-		return $wgContLang;
+		return MediaWikiServices::getInstance()->getContentLanguage();
 	}
 
 	/**

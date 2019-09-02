@@ -5,6 +5,9 @@
 	"url": "https://www.mediawiki.org/wiki/Extension:Calendar-Wikivoyage",
 	"descriptionmsg": "calendar-desc",
 	"type": "parserhook",
+	"requires": {
+		"MediaWiki": ">= 1.32.0"
+	},
 	"license-name": "GPL-2.0-or-later",
 	"ExtensionMessagesFiles": {
 		"CalendarMagic": "Calendar.i18n.magic.php"
