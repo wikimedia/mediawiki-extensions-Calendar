@@ -233,7 +233,7 @@ class CalendarTable {
 			for ( $i = 0; $i < 7; $i++ ) {
 				$this->dayArr['a'] = $this->getWeekdayAbbrev( $i + $this->weekStart, 0 );
 				$this->dayArr['A'] = $this->getWeekday( $i + $this->weekStart, 0 );
-				$this->dayArr['D'] = $c;
+				$this->dayArr['D'] = (string)$c;
 				$this->dayArr['d'] = sprintf( '%02s', $c );
 				$this->dayArr['e'] = sprintf( '%2s', $c );
 				$styles = [];
@@ -327,7 +327,7 @@ class CalendarTable {
 							preg_split( '/\s+/', $parts[1], 32, PREG_SPLIT_NO_EMPTY );
 						break;
 					case 'start':
-						$this->weekStart = $parts[1];
+						$this->weekStart = (int)$parts[1];
 						if ( $this->weekStart != 1 ) {
 							$this->weekStart = 0;
 						}
@@ -414,15 +414,15 @@ class CalendarTable {
 			'M' => sprintf( '%02s', $nextMonth ),
 			'n' => $this->getMonthNameAbbrev( $nextMonth, 0 ),
 			'N' => $this->getMonthName( $nextMonth, 0 ),
-			'o' => substr( $nextMonthYear, 2, 2 ),
-			'O' => $nextMonthYear,
+			'o' => substr( (string)$nextMonthYear, 2, 2 ),
+			'O' => (string)$nextMonthYear,
 			'p' => $this->getMonthNameAbbrev( $prevMonth, 0 ),
 			'P' => $this->getMonthName( $prevMonth, 0 ),
-			'q' => substr( $prevMonthYear, 2, 2 ),
-			'Q' => $prevMonthYear,
+			'q' => substr( (string)$prevMonthYear, 2, 2 ),
+			'Q' => (string)$prevMonthYear,
 			'R' => sprintf( '%02s', $prevMonth ),
-			'y' => substr( $this->year, 2, 2 ),
-			'Y' => $this->year
+			'y' => substr( (string)$this->year, 2, 2 ),
+			'Y' => (string)$this->year
 		];
 		$this->dayArr = $this->monthArr;
 		$this->titleLink = $this->replace( $this->titleLink, $this->monthArr );
