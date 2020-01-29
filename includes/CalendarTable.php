@@ -375,7 +375,7 @@ class CalendarTable {
 
 		if ( $offset != 0 ) {
 			$offM = $offset % 12;
-			$offset = round( ( $offset - $offM ) / 12 );
+			$offset = (int)round( ( $offset - $offM ) / 12 );
 			$this->month += $offM;
 			$this->year += $offset;
 			if ( $this->month > 12 ) {
