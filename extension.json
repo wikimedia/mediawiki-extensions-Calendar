@@ -13,9 +13,7 @@
 		"CalendarMagic": "Calendar.i18n.magic.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": [
-			"CalendarHooks::setupParserHooks"
-		]
+		"ParserFirstCallInit": "CalendarHooks::setupParserHooks"
 	},
 	"MessagesDirs": {
 		"Calendar": [
