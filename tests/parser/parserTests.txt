@@ -1,11 +1,13 @@
+!! Version 2
+
 !! test
 Basic #calendar usage
-!! input
+!! wikitext
 {{#calendar:|month=02|year=2018}}
-!! result
+!! html
 <table class="calendar calWidth">
 
-<tr>
+<tbody><tr>
 <td class="calTitle" colspan="7">February 2018
 </td></tr>
 <tr>
@@ -97,18 +99,17 @@ Basic #calendar usage
 <td>&#160;
 </td>
 <td>&#160;
-</td></tr></table>
-
+</td></tr></tbody></table>
 !! end
 
 !! test
 Basic #calendar with position
-!! input
+!! wikitext
 {{#calendar:|position=Right|month=02|year=2018}}
-!! result
+!! html
 <table class="calendar calRight calWidth">
 
-<tr>
+<tbody><tr>
 <td class="calTitle" colspan="7">February 2018
 </td></tr>
 <tr>
@@ -200,18 +201,17 @@ Basic #calendar with position
 <td>&#160;
 </td>
 <td>&#160;
-</td></tr></table>
-
+</td></tr></tbody></table>
 !! end
 
 !! test
 Basic #calendar with title
-!! input
+!! wikitext
 {{#calendar:|title=Parser Testing|month=02|year=2018}}
-!! result
+!! html
 <table class="calendar calWidth">
 
-<tr>
+<tbody><tr>
 <td class="calTitle" colspan="7">Parser Testing
 </td></tr>
 <tr>
@@ -303,18 +303,17 @@ Basic #calendar with title
 <td>&#160;
 </td>
 <td>&#160;
-</td></tr></table>
-
+</td></tr></tbody></table>
 !! end
 
 !! test
 Basic #calendar with highlightedDays
-!! input
+!! wikitext
 {{#calendar:|highlightedDays=1 9 17|month=02|year=2018}}
-!! result
+!! html
 <table class="calendar calWidth">
 
-<tr>
+<tbody><tr>
 <td class="calTitle" colspan="7">February 2018
 </td></tr>
 <tr>
@@ -406,6 +405,5 @@ Basic #calendar with highlightedDays
 <td>&#160;
 </td>
 <td>&#160;
-</td></tr></table>
-
+</td></tr></tbody></table>
 !! end
