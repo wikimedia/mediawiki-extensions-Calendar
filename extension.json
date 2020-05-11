@@ -31,5 +31,5 @@
 		"CalendarTable": "includes/CalendarTable.php",
 		"CalendarHooks": "includes/CalendarHooks.php"
 	},
-	"manifest_version": 1
+	"manifest_version": 2
 }
