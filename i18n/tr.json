@@ -1,8 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
+			"BaRaN6161 TURK",
 			"Joseph"
 		]
 	},
-	"calendar-desc": "Bir takvim görüntülemek için bir derleyici fonksiyonu ekler"
+	"calendar-desc": "Bir takvimi göstermek için ayrıştırıcı işlevi ekler"
 }
