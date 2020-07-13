@@ -1,8 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
-			"Cwlin0416",
-			"Waihorace"
+			"Cwlin0416"
 		]
 	},
 	"calendar-desc": "提供解析器函數用來顯示日曆"
