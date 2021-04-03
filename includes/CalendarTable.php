@@ -64,10 +64,8 @@ class CalendarTable {
 	 * @return int
 	 */
 	public function daysInMonth( $aMonth, $aYear ) {
-		// @codingStandardsIgnoreStart
 		for ( $day = 27; checkdate( $aMonth, $day, $aYear ); $day++ ) {
 		}
-		// @codingStandardsIgnoreEnd
 		return --$day;
 	}
 
