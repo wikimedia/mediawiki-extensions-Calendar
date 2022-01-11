@@ -17,7 +17,7 @@ class CalendarHooks {
 	 * @return string
 	 */
 	public static function calendarMagicWord( Parser $parser, ...$args ) {
-		$parser->getOutput()->addModuleStyles( 'ext.calendar' );
+		$parser->getOutput()->addModuleStyles( [ 'ext.calendar' ] );
 
 		$calendar = new CalendarTable;
 		$calendar->setParameters( $args );
