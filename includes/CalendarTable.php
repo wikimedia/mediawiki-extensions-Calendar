@@ -62,22 +62,11 @@ class CalendarTable {
 	}
 
 	/**
-	 * @param int $aMonth
-	 * @param int $aYear
-	 * @return int
-	 */
-	public function daysInMonth( $aMonth, $aYear ) {
-		for ( $day = 27; checkdate( $aMonth, $day, $aYear ); $day++ ) {
-		}
-		return --$day;
-	}
-
-	/**
 	 * @param int $aYear
 	 * @return bool
 	 */
 	public function isLeapYear( $aYear ) {
-		return $this->daysInMonth( 2, $aYear ) == 29;
+		return cal_days_in_month( CAL_GREGORIAN, 2, $aYear ) === 29;
 	}
 
 	/**
@@ -147,7 +136,7 @@ class CalendarTable {
 	 * @return Language
 	 */
 	private function getLang() {
-		if ( $this->lng == 'user' ) {
+		if ( $this->lng === 'user' ) {
 			global $wgLang;
 			return $wgLang;
 		}
@@ -171,10 +160,10 @@ class CalendarTable {
 	 */
 	public function buildTable() {
 		$day1 = $this->dayOfWeekOfFirstOfMonth( $this->month, $this->year );
-		if ( ( $this->weekStart > 0 ) && ( $day1 == 0 ) ) {
+		if ( ( $this->weekStart > 0 ) && ( $day1 === 0 ) ) {
 			$day1 = 7;
 		}
-		$days = $this->daysInMonth( $this->month, $this->year );
+		$days = cal_days_in_month( CAL_GREGORIAN, $this->month, $this->year );
 
 		$style = '';
 		$result = 'calendar';
@@ -190,31 +179,31 @@ class CalendarTable {
 				$style = ' align="center"';
 		}
 
-		if ( $this->tableWidth == 'default' ) {
+		if ( $this->tableWidth === 'default' ) {
 			$result .= ' calWidth';
-		} elseif ( $this->tableWidth != 'none' ) {
+		} elseif ( $this->tableWidth !== 'none' ) {
 			$style .= ' style="width: ' . $this->tableWidth . '"';
 		}
 		$result = '{| class="' . $result . '"' . $style . "\n|-\n";
 
 		$colSpan = 5;
-		if ( $this->calTitle == '' ) {
+		if ( $this->calTitle === '' ) {
 			$this->calTitle = $this->getMonthName( $this->month, $this->monthCharsCount )
 				. ' ' . $this->year;
 		}
-		if ( $this->titleLink != '' ) {
+		if ( $this->titleLink !== '' ) {
 			$this->calTitle = '[[' . $this->titleLink . '|' . $this->calTitle . ']]';
 		}
-		if ( $this->nextLink == '' ) {
+		if ( $this->nextLink === '' ) {
 			$colSpan++;
 		}
-		if ( $this->prevLink == '' ) {
+		if ( $this->prevLink === '' ) {
 			$colSpan++;
 		} else {
 			$result .= '| class="prevNext" | ' . $this->prevLink . "\n";
 		}
 		$result .= '| class="calTitle" colspan="' . $colSpan . '" | ' . $this->calTitle . "\n";
-		if ( $this->nextLink != '' ) {
+		if ( $this->nextLink !== '' ) {
 			$result .= '| class="prevNext" | ' . $this->nextLink . "\n";
 		}
 
@@ -238,13 +227,13 @@ class CalendarTable {
 				$this->dayArr['d'] = sprintf( '%02s', $c );
 				$this->dayArr['e'] = sprintf( '%2s', $c );
 				$styles = [];
-				if ( $i == 0 && $this->weekStart == 0 ) {
+				if ( $i === 0 && $this->weekStart === 0 ) {
 					$styles[] = 'sundays';
-				} elseif ( $i == 6 && $this->weekStart == 1 ) {
+				} elseif ( $i === 6 && $this->weekStart === 1 ) {
 					$styles[] = 'sundays';
 				}
-				if ( $this->showToday && ( $c == $this->curDay ) && ( $this->curMonth == $this->month )
-					&& ( $this->curYear == $this->year )
+				if ( $this->showToday && ( $c === $this->curDay ) && ( $this->curMonth === $this->month )
+					&& ( $this->curYear === $this->year )
 				) {
 					$styles[] = 'today';
 				}
@@ -252,7 +241,7 @@ class CalendarTable {
 					$styles[] = 'highlighted';
 				}
 				$allStyles = implode( ' ', $styles );
-				if ( $allStyles == '' ) {
+				if ( $allStyles === '' ) {
 					$result .= '| ';
 				} else {
 					$result .= '| class="' . $allStyles . '" | ';
@@ -292,10 +281,10 @@ class CalendarTable {
 
 		foreach ( $args as $arg ) {
 			$parts = array_map( 'trim', explode( '=', $arg, 2 ) );
-			if ( ( count( $parts ) == 2 ) && ( $parts[0] > 0 ) && ( $parts[0] < 32 ) ) {
+			if ( ( count( $parts ) === 2 ) && ( $parts[0] > 0 ) && ( $parts[0] < 32 ) ) {
 				$this->dailyLinks[$parts[0]] = $parts[1];
 			} else {
-				if ( count( $parts ) != 2 ) {
+				if ( count( $parts ) !== 2 ) {
 					continue;
 				}
 				switch ( $parts[0] ) {
@@ -310,7 +299,7 @@ class CalendarTable {
 						break;
 					case 'lang':
 						$this->lng = strtolower( $parts[1] );
-						if ( $this->lng != 'user' ) {
+						if ( $this->lng !== 'user' ) {
 							$this->lng = 'content';
 						}
 						break;
@@ -329,7 +318,7 @@ class CalendarTable {
 						break;
 					case 'start':
 						$this->weekStart = (int)$parts[1];
-						if ( $this->weekStart != 1 ) {
+						if ( $this->weekStart !== 1 ) {
 							$this->weekStart = 0;
 						}
 						break;
@@ -356,7 +345,7 @@ class CalendarTable {
 						break;
 					case 'tableWidth':
 						$this->tableWidth = $parts[1];
-						if ( $this->tableWidth != 'default' && $this->tableWidth != 'none'
+						if ( $this->tableWidth !== 'default' && $this->tableWidth !== 'none'
 							&& preg_match( '/^\d+(\%|em|ex|pc|pt|px|in|mm|cm)$/', $this->tableWidth ) == 0
 						) {
 							$this->tableWidth = 'default';
