@@ -13,7 +13,7 @@
 		"CalendarMagic": "Calendar.i18n.magic.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "CalendarHooks::setupParserHooks"
+		"ParserFirstCallInit": "MediaWiki\\Extension\\Calendar\\Hooks::setupParserHooks"
 	},
 	"MessagesDirs": {
 		"Calendar": [
@@ -27,9 +27,8 @@
 			"remoteExtPath": "Calendar/modules"
 		}
 	},
-	"AutoloadClasses": {
-		"CalendarTable": "includes/CalendarTable.php",
-		"CalendarHooks": "includes/CalendarHooks.php"
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\Calendar\\": "includes/"
 	},
 	"manifest_version": 2
 }

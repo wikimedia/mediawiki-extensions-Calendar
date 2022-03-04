@@ -1,5 +1,8 @@
 <?php
 
+namespace MediaWiki\Extension\Calendar;
+
+use Language;
 use MediaWiki\MediaWikiServices;
 
 class CalendarTable {

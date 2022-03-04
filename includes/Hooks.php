@@ -1,14 +1,18 @@
 <?php
 
+namespace MediaWiki\Extension\Calendar;
+
+use Parser;
+
 /**
  * Some hooks for Calendar extension.
  */
-class CalendarHooks {
+class Hooks {
 	/**
 	 * @param Parser $parser
 	 */
 	public static function setupParserHooks( Parser $parser ) {
-		$parser->setFunctionHook( 'calendar', [ 'CalendarHooks', 'calendarMagicWord' ] );
+		$parser->setFunctionHook( 'calendar', [ self::class, 'calendarMagicWord' ] );
 	}
 
 	/**
