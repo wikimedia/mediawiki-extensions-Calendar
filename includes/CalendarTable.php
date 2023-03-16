@@ -2,6 +2,7 @@
 
 namespace MediaWiki\Extension\Calendar;
 
+use DateTime;
 use Language;
 use MediaWiki\MediaWikiServices;
 
@@ -36,7 +37,7 @@ class CalendarTable {
 	/** @var bool */
 	protected $showToday = true;
 
-	/** @var int */
+	/** @var DateTime */
 	protected $today;
 	/** @var int */
 	protected $curDay;
@@ -58,7 +59,7 @@ class CalendarTable {
 	 * @return int
 	 */
 	public function dayOfWeek( $timestamp ) {
-		return intval( strftime( "%w", $timestamp ) );
+		return intval( date( 'w', $timestamp ) );
 	}
 
 	/**
@@ -268,10 +269,10 @@ class CalendarTable {
 	 * @param array $args
 	 */
 	public function setParameters( array $args ) {
-		$this->today = strtotime( "now" );
-		$this->curDay = intval( strftime( "%d", $this->today ) );
-		$this->curMonth = intval( strftime( "%m", $this->today ) );
-		$this->curYear = intval( strftime( "%Y", $this->today ) );
+		$this->today = new DateTime( "now" );
+		$this->curDay = intval( $this->today->format( "d" ) );
+		$this->curMonth = intval( $this->today->format( "m" ) );
+		$this->curYear = intval( $this->today->format( "Y" ) );
 		$this->month = $this->curMonth;
 		$this->year = $this->curYear;
 		for ( $i = 0; $i < 32; $i++ ) {
