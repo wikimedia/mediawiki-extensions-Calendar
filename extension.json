@@ -13,7 +13,12 @@
 		"CalendarMagic": "Calendar.i18n.magic.php"
 	},
 	"Hooks": {
-		"ParserFirstCallInit": "MediaWiki\\Extension\\Calendar\\Hooks::setupParserHooks"
+		"ParserFirstCallInit": "main"
+	},
+	"HookHandlers": {
+		"main": {
+			"class": "MediaWiki\\Extension\\Calendar\\Hooks"
+		}
 	},
 	"MessagesDirs": {
 		"Calendar": [
