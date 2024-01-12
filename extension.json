@@ -6,7 +6,7 @@
 	"descriptionmsg": "calendar-desc",
 	"type": "parserhook",
 	"requires": {
-		"MediaWiki": ">= 1.41"
+		"MediaWiki": ">= 1.42"
 	},
 	"license-name": "GPL-2.0-or-later",
 	"ExtensionMessagesFiles": {
