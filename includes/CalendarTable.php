@@ -3,7 +3,7 @@
 namespace MediaWiki\Extension\Calendar;
 
 use DateTime;
-use Language;
+use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
 
 class CalendarTable {
