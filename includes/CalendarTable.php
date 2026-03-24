@@ -3,6 +3,7 @@
 namespace MediaWiki\Extension\Calendar;
 
 use DateTime;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Language\Language;
 use MediaWiki\MediaWikiServices;
 
@@ -138,8 +139,7 @@ class CalendarTable {
 	 */
 	private function getLang() {
 		if ( $this->lng === 'user' ) {
-			global $wgLang;
-			return $wgLang;
+			return RequestContext::getMain()->getLanguage();
 		}
 		return MediaWikiServices::getInstance()->getContentLanguage();
 	}
