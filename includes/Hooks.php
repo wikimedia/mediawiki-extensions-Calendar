@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Calendar;
 
-use MediaWiki\Hook\ParserFirstCallInitHook;
+use MediaWiki\Parser\Hook\ParserFirstCallInitHook;
 use MediaWiki\Parser\Parser;
 
 /**
